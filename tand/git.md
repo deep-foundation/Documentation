@@ -182,7 +182,20 @@ git checkout -f main
 git stash pop
 ```
 
+если есть проблемы с коммитом, то можно склонировать репозиторий и попробовать заного
+```shell
+git clone https://github.com/Tand-Anthros/Documentation.git
+```
 
+получить данные из коммита
+```shell
+git fetch
+```
+
+объединить данные данной ветки с родительской веткой
+```shell
+git merge
+```
 
 
 ---

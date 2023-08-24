@@ -62,7 +62,7 @@
 # issue
 список излишних папок которые порождает deep-case
 
-#### НАЙДЕННЫЕ:
+#### ОПИСАНИЕ ОШИБКИ:
 - C:/Users/Tand/AppData/Local/deep.case-updater
 - C:/Users/Tand/AppData/Roaming/Deep.Case
 - C:/Program Files/Deep.Case

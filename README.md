@@ -1,5 +1,3 @@
-https://github.com/deep-foundation/Documentation/wiki
-
 # главная страница
 \* ВНИМАНИЕ ВЫ ЧИТАЕТЕ НЕ РЕЛИЗНУЮ ВЕРСИЮ, ЗДЕСЬ МОГУТ БЫТЬ ОШИБКИ, НЕДОЧЕТЫ И НЕДОСКАЗАННОСТИ. ПОЖАЛУЙСТА ВОСПОЛЬЗУЙТЕСЬ АКТУАЛЬНОЙ ПОСЛЕДНЕЙ ВЕРСИЕЙ ЭТОЙ ДОКУМЕНТАЦИИ [ЗДЕСЬ](tand/realise.md)
 
@@ -10,6 +8,9 @@ https://github.com/deep-foundation/Documentation/wiki
 - [ ] [линки, case, micro, пакеты](notion-deep-documentation.md)
 - [ ] [как добавить сообщения в пакет](ivansglazunov/deep-create-messaging-package.md)
 - [ ] [что то про базу данных](ivansglazunov/deep-runkit.md)
+
+работы freephoenix888:
+- [ ] [wiki](freephoenix888/wiki.md)
 
 работы tand:
 - [x] [как писать документацию](tand/scheme.md)

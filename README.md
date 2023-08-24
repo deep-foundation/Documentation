@@ -5,8 +5,8 @@
 
 
 #### РАБОТЫ IVANSGLAZUNOV:
-- [ ] [статьи из notion](notion-deep-documentation.md)
-- [ ] [статьи из runkit](runkit-deep-documentation.md)
+- [ ] [статьи из notion](ivansglazunov/notion-deep-documentation.md)
+- [ ] [статьи из runkit](ivansglazunov/runkit-deep-documentation.md)
 
 
 #### РАБОТЫ FREEPHOENIX888:

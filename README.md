@@ -5,9 +5,8 @@
 
 
 #### РАБОТЫ IVANSGLAZUNOV:
-- [ ] [линки, case, micro, пакеты](notion-deep-documentation.md)
-- [ ] [как добавить сообщения в пакет](ivansglazunov/deep-create-messaging-package.md)
-- [ ] [что то про базу данных](runkit-deep-documentation.md)
+- [ ] [статьи из notion](notion-deep-documentation.md)
+- [ ] [статьи из runkit](runkit-deep-documentation.md)
 
 
 #### РАБОТЫ FREEPHOENIX888:

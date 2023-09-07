@@ -54,9 +54,9 @@ await deep.serial({
 With createSerialOperations you get the fields you need, depending on the selected table and operation, and when you don't use createSerialOperations you will see all the possible fields, even if you don't need them at all for your operation
 If we do not use `createSerialOperation` typescript unable to defer types by using your arguments because typescript is bad at deep structures  
 Without:  
-![image](deepclient-1.png)
+![](deepclient-1.png)
 With:  
-![image](__content__/deepclient-2.png)   
+![](__content__/deepclient-2.png)   
 
 
 

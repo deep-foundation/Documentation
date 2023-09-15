@@ -12,9 +12,12 @@
 #### РАБОТЫ FREEPHOENIX888:
 - [ ] [шпаргалка](freephoenix888/cheatsheet.md)
 - [ ] [deepclient](freephoenix888/deep-client.md)
-- [ ] [промпты gpt-4 для использования с deep](freephoenix888/gpt4-prompts_to_use-deep.md)
 - [ ] [руководство](freephoenix888/guide.md)
 - [ ] [пакетный менеджер npm](freephoenix888/npm-packager.md)
+
+
+#### РАБОТЫ DRAKONARD:
+- [ ] [промпты gpt-4 для использования с deep](drakonard/gpt4-prompts_to_use-deep.md)
 
 
 #### РАБОТЫ TAND'Y:

@@ -93,7 +93,7 @@ sudo ./format-azure-disk.sh sda
 sudo ./attach-azure-disk.sh sda xfs /data
 ```
 
-5. Deatach if needed
+5. Deatach if needed (for example to attach it to another VM)
 
 ```sh
 sudo ./detach-azure-disk.sh sda /data

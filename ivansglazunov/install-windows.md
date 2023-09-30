@@ -1,8 +1,3 @@
-# установка среды для deepcase-app
-#### УСТАНОВКА DOCKER
-
-
----
 # Install Windows [Deep.Case](http://Deep.Case) application
 
 ## Install docker
@@ -18,6 +13,15 @@ Make your choice
 
 ![](__content__/install-windows-3.png)
 
+## ATTENTION!
+\* THIS BLOCK TAKEN FROM INSTALL_AND_USING/DOCKER_VERSION/WINDOWS
+
+If you see error
+![](install-windows-12.png)
+You need to enable virtualisation in your BIOS settings.
+
+\* END TAKED BLOCK
+
 You may see “WSL2 Installation is incomplete”. Before clicking restart in window below - download and install kernel update [https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel)
 
 ![](__content__/install-windows-4.png)
@@ -28,6 +32,12 @@ Click restart, and if all is ok - you will see:
 
 ![](__content__/install-windows-6.png)
 
+## ATTENTION!
+\* THIS BLOCK TAKEN FROM INSTALL_AND_USING/DOCKER_VERSION/WINDOWS
+
+If you see “docker stopping” for a long time in the docker window - you need to restart OS.
+
+\* END TAKED BLOCK
 ## Install node
 
 We trust nvm to manage node versions just download installer
@@ -79,3 +89,16 @@ After running, you can see this:
 
 
 ---
+# Install Deep with shell
+\* THIS PAGE HAS BEEN CHANGED, SINCE DOCKER INSTALLATION INSTRUCTIONS ARE ALREADY ON THE TOP
+
+- Use PowerShell as administrator to download starter windows-start.ps1 and execute it
+
+```powershell
+mkdir deep; cd deep; wget -Uri "<https://raw.githubusercontent.com/deep-foundation/deeplinks/main/docker-prod/deep/windows-start.ps1>" -OutFile ".\\windows-start.ps1"; Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force; ./windows-start.ps1
+```
+
+- If browser opened, and you see something like this
+![](__content__/install-windows-13.png)
+
+You are ready to explore deep associative university. Good luck!

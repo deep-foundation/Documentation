@@ -5,6 +5,7 @@
 
 
 #### РАБОТЫ IVANSGLAZUNOV:
+- [ ] [установка deep](ivansglazunov/install_and_using.md)
 - [ ] [статьи из notion](ivansglazunov/notion-deep-documentation.md)
 - [ ] [статьи из runkit](ivansglazunov/runkit-deep-documentation.md)
 

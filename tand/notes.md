@@ -36,20 +36,32 @@
 - [x] переработка блока материала и инструментов в материалы в scheme
 - [x] переработка readme под блок общих адаптированных материалов, пока нет общей документации
 - [x] добавлена первая страница общей документации introduction.md
-- [x] перенос документации ivanglazunov из notion: install on windows
-- [x] перенос документации ivanglazunov из notion: install on linux
-- [x] перенос документации ivanglazunov из notion: install on macos
-- [x] перенос документации ivanglazunov из notion: install on gitpod
-- [ ] перенос документации ivanglazunov из notion: guides
-- [ ] перенос документации ivanglazunov из notion: deep.links
-- [ ] перенос документации ivanglazunov из notion: deep.case
-- [ ] перенос документации ivanglazunov из notion: deep.micro
-- [ ] перенос документации ivanglazunov из notion: deep.memo
-- [ ] перенос документации ivanglazunov из notion: packages
+- [x] перенос документации ivansglazunov из notion: install on windows
+- [x] перенос документации ivansglazunov из notion: install on linux
+- [x] перенос документации ivansglazunov из notion: install on macos
+- [x] перенос документации ivansglazunov из notion: install on gitpod
+- [x] перенос документации ivansglazunov из notion: install on runkit
+- [ ] перенос документации ivansglazunov из notion: guides
+- [ ] перенос документации ivansglazunov из notion: deep.links
+- [ ] перенос документации ivansglazunov из notion: deep.case
+- [ ] перенос документации ivansglazunov из notion: deep.micro
+- [ ] перенос документации ivansglazunov из notion: deep.memo
+- [ ] перенос документации ivansglazunov из notion: packages
 
 
 #### AGGREGATION
+объединение или переработка статей для общей документации
 - [x] объединены статьи install-os и install-docker-os
+
+
+#### TRANSLATE
+перевод статей взятых со сторонних источников на русский
+- [ ] install-windows
+- [ ] install-linux
+- [ ] install-macos
+- [ ] install-gitpod_env
+- [ ] install-runkit_terminal
+- промежуточные статьи не учитываются (как списки других статей)
 
 
 #### WRITE: 

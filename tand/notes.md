@@ -5,6 +5,8 @@
 
 тут как и с системой [scheme#АГРЕГАЦИЯ](агрегации), будет применён тот же метод для релизов. данный релиз является первым
 
+что бы не путаться при git pull, описание на слиянии просто: "merge: with konard". все изменения запишет сам участник
+
 
 #### FRAME: 
 работа со структурой. создание файлов, переименование, работа с переносом блоков текста
@@ -34,7 +36,10 @@
 - [x] переработка блока материала и инструментов в материалы в scheme
 - [x] переработка readme под блок общих адаптированных материалов, пока нет общей документации
 - [x] добавлена первая страница общей документации introduction.md
-- [ ] перенос документации ivanglazunov из notion: install and using
+- [x] перенос документации ivanglazunov из notion: install on windows
+- [x] перенос документации ivanglazunov из notion: install on linux
+- [x] перенос документации ivanglazunov из notion: install on macos
+- [x] перенос документации ivanglazunov из notion: install on gitpod
 - [ ] перенос документации ivanglazunov из notion: guides
 - [ ] перенос документации ivanglazunov из notion: deep.links
 - [ ] перенос документации ivanglazunov из notion: deep.case

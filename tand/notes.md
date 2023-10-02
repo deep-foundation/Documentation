@@ -33,6 +33,7 @@
 - [x] была создана папка general для агрегирования всей доступной документации
 - [x] переработка блока материала и инструментов в материалы в scheme
 - [x] переработка readme под блок общих адаптированных материалов, пока нет общей документации
+- [x] добавлена первая страница общей документации introduction.md
 - [ ] перенос документации ivanglazunov из notion: install and using
 - [ ] перенос документации ivanglazunov из notion: guides
 - [ ] перенос документации ivanglazunov из notion: deep.links
@@ -40,6 +41,10 @@
 - [ ] перенос документации ivanglazunov из notion: deep.micro
 - [ ] перенос документации ivanglazunov из notion: deep.memo
 - [ ] перенос документации ivanglazunov из notion: packages
+
+
+#### AGGREGATION
+- [x] объединены статьи install-os и install-docker-os
 
 
 #### WRITE: 

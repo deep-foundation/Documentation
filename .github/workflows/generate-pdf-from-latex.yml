@@ -11,24 +11,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Cache TexLive
-      uses: actions/cache@v2
+    - name: Compile LaTeX to PDF
+      uses: dante-ev/lualatex-action@v2
       with:
-        path: |
-          /usr/local/texlive
-        key: texlive-${{ runner.os }}-${{ hashFiles('freephoenix888/**/*.tex') }}
-        restore-keys: |
-          texlive-${{ runner.os }}-
-
-    - name: Install dependencies
-      run: |
-        sudo apt-get install -y texlive-lang-cyrillic
-        sudo apt-get install -y texlive-latex-extra
-
-    - name: Generate PDF
-      run: |
-        mkdir output  # Create an 'output' directory if it doesn't exist
-        pdflatex -output-directory=output freephoenix888/documentation.tex
+        root_file: freephoenix888/documentation.tex
+        args: '-output-directory=output'
 
     - name: Upload PDF
       uses: actions/upload-artifact@v2

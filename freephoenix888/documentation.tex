@@ -229,18 +229,18 @@
                 указывать на связи из других пакетов. В таком случае пакет становится зависимым от другого пакета
 
 
-Пример использования пакета \texttt{@freephoenix888/dependency}:
+Пример создания связи, которая указывает на связь другого пакета и содержится в нашем пакете:
 
 \begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("@freephoenix888/dependency", "Dependency"),
-  from_id: await deep.id("deep-memo"),
-  to_id: await deep.id("capacitor-device"),
+  from_id: await deep.id("deep-memo", "Device"),
+  to_id: await deep.id("deep-memo", "Device"),
   in: {
     data: [
       {
-        type_id: containTypeLinkId,
-        from_id: dependantPackageLinkId,
+        type_id: await deep.id("@deep-foundation/core", "Contain"),
+        from_id: await deep.id("MyPackageName"),
         string: {
           data: {
             value: `MyDependency`,

@@ -396,8 +396,8 @@ deep-foundation.com/my-path:5000.
 \begin{itemize}
   \item Создать SyncTextFile с таким кодом:
         \begin{lstlisting}
-() => {
-    return "ok";
+(request, response) => {
+    response.send("ok");
 }
 \end{lstlisting}
   \item Создать Handler от dockerSupportsJs до нашего SyncTextFile

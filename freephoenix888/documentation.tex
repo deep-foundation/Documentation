@@ -307,7 +307,7 @@ await deep.insert({
 
 Примечание: \texttt{HandleUpdate} имеет начало в виде ТИПА \texttt{Double}, а
 не конкретного \texttt{Double} (экземпляра), то есть "Тип \texttt{Email}
-обрабатывается хендлером"
+обрабатывается обработчиком"
 
 Создаём связь \texttt{Email}
 
@@ -351,11 +351,11 @@ async ({ data: { newLink: emailLink } }) => {
         \texttt{Handler})
         \begin{verbatim}
     Примечание: \texttt{HandleUpdate} имеет начало в виде ТИПА \texttt{Email},
-    а не конкретного \texttt{Email} (экземпляра), то есть "Тип \texttt{Email} обрабатывается хендлером"
+    а не конкретного \texttt{Email} (экземпляра), то есть "Тип \texttt{Email} обрабатывается обработчиком"
     \end{verbatim}
   \item Создаём связь \texttt{Email}
   \item Обновляем связь \texttt{Email} (присваиваем ей значение)
-  \item Видим результат асинхронного хендлера в виде связей:
+  \item Видим результат асинхронного обработчика в виде связей:
         \begin{itemize}
           \item При успешном выполнении: Связь-триггер --Then-> Promise
                 --Resolved-> PromiseResult (с object value)

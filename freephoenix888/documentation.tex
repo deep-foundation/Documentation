@@ -645,6 +645,7 @@ await deep.update(
 \paragraph{Примеры}
 
 \subparagraph{Удаление связи с типом 1}
+\leavevmode
 \begin{lstlisting}
 await deep.delete({
   type_id: 1,
@@ -652,6 +653,7 @@ await deep.delete({
 \end{lstlisting}
 
 \subparagraph{Удаление связи с типом Type из пакета @deep-foundation/core}
+\leavevmode
 \begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -659,6 +661,7 @@ await deep.delete({
 \end{lstlisting}
 
 \subparagraph{Удаление связи с типом Reply из пакета messenger}
+\leavevmode
 \begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("messenger", "Reply"),
@@ -668,6 +671,7 @@ await deep.delete({
 \end{lstlisting}
 
 \subparagraph{Удаление строкового значения для связи 100}
+\leavevmode
 \begin{lstlisting}
 await deep.delete(
   {

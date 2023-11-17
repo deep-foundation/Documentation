@@ -595,10 +595,9 @@ await deep.select({
 
 \subparagraph{Получение строкового значения для связи 100}
 \begin{lstlisting}
-await deep.insert(
+await deep.select(
   {
     link_id: 100,
-    value: "MyValue",
   },
   {
     table: "strings",

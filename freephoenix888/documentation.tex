@@ -535,8 +535,8 @@ await deep.insert({
 \begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id(deep.linkId, "MyMessage"),
-  to_id: await deep.id(deep.linkId, "MyConversation"),
+  from_id: await deep.id("MyPackageName", "MyMessage"),
+  to_id: await deep.id("MyPackageName", "MyConversation"),
 });
 \end{lstlisting}
 
@@ -575,8 +575,8 @@ await deep.select({
 \begin{lstlisting}
 await deep.select({
   type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id(deep.linkId, "MyMessage"),
-  to_id: await deep.id(deep.linkId, "MyConversation"),
+  from_id: await deep.id("MyPackageName", "MyMessage"),
+  to_id: await deep.id("MyPackageName", "MyConversation"),
 });
 \end{lstlisting}
 
@@ -649,8 +649,8 @@ await deep.delete({
 \begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id(deep.linkId, "MyMessage"),
-  to_id: await deep.id(deep.linkId, "MyConversation"),
+  from_id: await deep.id("MyPackageName", "MyMessage"),
+  to_id: await deep.id("MyPackageName", "MyConversation"),
 });
 \end{lstlisting}
 

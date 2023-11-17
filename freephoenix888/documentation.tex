@@ -13,9 +13,13 @@
 \usepackage{listingsutf8}
 
 \lstdefinelanguage{TypeScript}{
-  keywords=[1]{break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  keywords=[1]{break, case, catch, continue, debugger, default, delete, do,
+      else, false, finally, for, function, if, in, instanceof, new, null, return,
+      switch, this, throw, true, try, typeof, var, void, while, with},
   keywordstyle=[1]\color{blue}\bfseries,
-  keywords=[2]{abstract, as, constructor, declare, enum, export, extends, from, get, implements, import, interface, let, module, private, protected, public, set, static, yield, in},
+  keywords=[2]{abstract, as, constructor, declare, enum, export, extends, from,
+      get, implements, import, interface, let, module, private, protected, public,
+      set, static, yield, in},
   keywordstyle=[2]\color{teal}\bfseries,
   identifierstyle=\color{black},
   commentstyle=\color{green!40!black},
@@ -37,7 +41,6 @@
   showtabs=false,
   xleftmargin=2em,  % Adjust the value according to your indentation style
 }
-
 
 \renewcommand{\contentsname}{Содержание} % Change the name of the table of contents
 
@@ -73,8 +76,10 @@
         \begin{itemize}
           \item Любая связь может использоваться как тип для создания другой
                 связи
-          \item Если связь является точкой (без начала и конца) - экземпляр такой связи тоже будет точкой
-          \item Если связь ведёт от связи А к связи Б, то экземпляр этой связи должен вести от экземпляра связи А к экземпляру связи Б
+          \item Если связь является точкой (без начала и конца) - экземпляр
+                такой связи тоже будет точкой
+          \item Если связь ведёт от связи А к связи Б, то экземпляр этой связи
+                должен вести от экземпляра связи А к экземпляру связи Б
           \item Если нужно что бы экземпляр связи мог быть связан с любой
                 связью,
                 то нужно использовать встроенный тип Any из пакета
@@ -187,7 +192,8 @@
 \paragraph{Описание}
 Любая связь может быть типом для вставки другой связи.
 \paragraph{Сценарии использования связи как типа}
-Если связь является точкой (без начала и конца) - экземпляр такой связи тоже будет точкой
+Если связь является точкой (без начала и конца) - экземпляр такой связи тоже
+будет точкой
 Если связь является связью между двумя определёнными типами - вы сможете
 вставить связь только между связями этих определённых типов
 Совет: если связь должна вести от/до неопределённого типа связи, то следует
@@ -329,16 +335,16 @@ value)
   \item Создаём связь \texttt{Email} (тип: \texttt{Type})
   \item Создаём \texttt{SyncTextFile} содержащий такой код:
         \begin{lstlisting}
-    async ({ data: { newLink: emailLink } }) => {
-      const email = emailLink.value?.value;
-      if (!email) {
-        throw new Error(`Link ${emailLink.id} has not value`);
-      }
-      if (!email.includes("@")) {
-        throw new Error(`Email ${email} does not include @`);
-      }
-    };
-    \end{lstlisting}
+async ({ data: { newLink: emailLink } }) => {
+  const email = emailLink.value?.value;
+  if (!email) {
+    throw new Error(`Link ${emailLink.id} has not value`);
+  }
+  if (!email.includes("@")) {
+    throw new Error(`Email ${email} does not include @`);
+  }
+};
+\end{lstlisting}
   \item Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} (из
         \texttt{@deep-foundation/core}), до: наш \texttt{SyncTextFile})
   \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
@@ -390,10 +396,10 @@ deep-foundation.com/my-path:5000.
 \begin{itemize}
   \item Создать SyncTextFile с таким кодом:
         \begin{lstlisting}
-    () => {
-        return "ok";
-    }
-    \end{lstlisting}
+() => {
+    return "ok";
+}
+\end{lstlisting}
   \item Создать Handler от dockerSupportsJs до нашего SyncTextFile
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
@@ -411,17 +417,17 @@ deep-foundation.com/my-path:5000.
 \begin{itemize}
   \item Создать SyncTextFile с таким кодом:
         \begin{lstlisting}
-        async (
-          request,
-          response,
-        ) => {
-          if(request.isOk) {
-           response.send("ok") 
-          } else {
-            response.send("not ok")
-          }
-        }
-    \end{lstlisting}
+async (
+  request,
+  response,
+) => {
+  if(request.isOk) {
+    response.send("ok") 
+  } else {
+    response.send("not ok")
+  }
+}
+\end{lstlisting}
   \item Создать Handler от dockerSupportsJs до нашего SyncTextFile
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
@@ -665,12 +671,12 @@ await deep.delete(
   \centering
   \caption{Часть регистрации изменений}
   \begin{tabular}{|c|p{8cm}|c|}
-      \hline
-      \textbf{№} & \textbf{Изменение} & \textbf{Дата} \\
-      \hline
-      1 & Добавлена документация & 17.11.2023 \\
-      \hline
-      % 2 & Изменены требования к системе & 05.02.2023 \\
+    \hline
+    \textbf{№} & \textbf{Изменение}     & \textbf{Дата} \\
+    \hline
+    1          & Добавлена документация & 17.11.2023    \\
+    \hline
+     % 2 & Изменены требования к системе & 05.02.2023 \\
   \end{tabular}
 \end{table}
 

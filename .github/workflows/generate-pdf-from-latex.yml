@@ -1,0 +1,55 @@
+name: Generate PDF from LaTeX
+
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Cache TexLive
+      uses: actions/cache@v2
+      with:
+        path: |
+          /usr/local/texlive
+        key: texlive-${{ runner.os }}-${{ hashFiles('freephoenix888/**/*.tex') }}
+        restore-keys: |
+          texlive-${{ runner.os }}-
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get install -y texlive-lang-cyrillic
+        sudo apt-get install -y texlive-latex-extra
+
+    - name: Generate PDF
+      run: |
+        mkdir output  # Create an 'output' directory if it doesn't exist
+        pdflatex -output-directory=output freephoenix888/documentation.tex
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: generated-pdf
+        path: ./output/documentation.pdf
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ github.sha }}
+        release_name: Release ${{ github.sha }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./output/documentation.pdf
+        asset_name: documentation.pdf
+        asset_content_type: application/pdf

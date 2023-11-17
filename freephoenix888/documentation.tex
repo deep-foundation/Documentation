@@ -11,11 +11,11 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{listingsutf8}
-\usepackage{babel} 
+
 \lstdefinelanguage{TypeScript}{
   keywords=[1]{break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
   keywordstyle=[1]\color{blue}\bfseries,
-  keywords=[2]{abstract, as, constructor, declare, enum, export, extends, from, get, implements, import, interface, let, module, private, protected, public, set, static, yield},
+  keywords=[2]{abstract, as, constructor, declare, enum, export, extends, from, get, implements, import, interface, let, module, private, protected, public, set, static, yield, in},
   keywordstyle=[2]\color{teal}\bfseries,
   identifierstyle=\color{black},
   commentstyle=\color{green!40!black},
@@ -34,8 +34,10 @@
   numbersep=5pt,
   tabsize=2,
   breaklines=true,
-  showtabs=false
+  showtabs=false,
+  xleftmargin=2em,  % Adjust the value according to your indentation style
 }
+
 
 \renewcommand{\contentsname}{Содержание} % Change the name of the table of contents
 

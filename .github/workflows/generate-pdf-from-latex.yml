@@ -14,7 +14,8 @@ jobs:
     - name: Compile LaTeX to PDF
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: freephoenix888/documentation.tex
+        root_file: documentation.tex
+        working_directory: freephoenix888
 
     - name: Upload PDF
       uses: actions/upload-artifact@v2

@@ -6,6 +6,7 @@
 \usepackage{listings}
 \usepackage{url}
 \usepackage{titling}
+\usepackage{textcomp}
 \usepackage{lipsum} % Для генерации случайного текста
 % Syntax Highlighting
 \usepackage{xcolor}
@@ -333,11 +334,22 @@ await deep.insert({
 \paragraph{Асинхронные обработчики}
 \subparagraph{Описание}
 Асинхронные серверные обработчики выполняются после транзакции, в результате
-приводя к появлению следующих связей:
-При успешном выполнении: Связь-триггер --Then-> Promise --Resolved->
-PromiseResult (с object value)
-При ошибке: Связь-триггер --Then-> Promise --Rejected-> PromiseResult (с object
-value)
+приводя к появлению следующих связей: \\
+\newenvironment{handler_success_result_info}
+{%
+  \noindent При успешном выполнении: Связь\textendash триггер \textendash Then\textendash > Promise \textendash Resolved\textendash > \\
+  PromiseResult {(с object value)} 
+}
+{}
+\newenvironment{handler_fail_result_info}
+{%
+  При ошибке: Связь\textendash триггер \textendash Then\textendash > Promise \textendash Rejected\textendash > PromiseResult {(с object value)} 
+}
+{}
+\begin{handler_success_result_info}
+\end{handler_success_result_info}\\
+\begin{handler_fail_result_info}
+\end{handler_fail_result_info}\\
 Результат выполнения асинхронного обработчика находится ниже по дереву
 promiseTree от связи-триггера. В визуальном интерфейсе DeepCase можно увидеть
 резузльтат используя контекстное меню->traveler->down->promiseTree
@@ -373,10 +385,11 @@ async ({ data: { newLink: emailLink } }) => {
   \item Обновляем связь \texttt{Email} (присваиваем ей значение)
   \item Видим результат асинхронного обработчика в виде связей:
         \begin{itemize}
-          \item При успешном выполнении: Связь-триггер --Then-> Promise
-                --Resolved-> PromiseResult (с object value)
-          \item При ошибке: Связь-триггер --Then-> Promise --Rejected->
-                PromiseResult (с object value)
+          \item \begin{handler_success_result_info}
+          \end{handler_success_result_info}\\
+          
+          \item \begin{handler_fail_result_info}
+          \end{handler_fail_result_info}\\
         \end{itemize}
 \end{itemize}
 
@@ -582,7 +595,7 @@ await deep.select({
 
 \subparagraph{Получение строкового значения для связи 100}
 \begin{lstlisting}
-await deep.select(
+await deep.insert(
   {
     link_id: 100,
     value: "MyValue",

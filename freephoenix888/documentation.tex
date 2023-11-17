@@ -288,9 +288,9 @@ await deep.insert({
 
 \begin{lstlisting}
 ({ data: { newLink: emailLink } }) => {
-  const email = doubleLink.value?.value;
+  const email = emailLink.value?.value;
   if (!email) {
-    throw new Error(`Link ${doubleLink.id} has not value`);
+    throw new Error(`Link ${emailLink.id} has not value`);
   }
   if (!email.includes("@")) {
     throw new Error(`Email ${email} does not include @`);
@@ -304,8 +304,8 @@ await deep.insert({
 Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
 \texttt{Handler})
 
-Примечание: \texttt{HandleUpdate} имеет начало в виде ТИПА \texttt{Double}, а
-не конкретного \texttt{Double} (экземпляра), то есть "Тип \texttt{Email}
+Примечание: \texttt{HandleUpdate} имеет начало в виде ТИПА \texttt{Email}, а
+не конкретного \texttt{Email} (экземпляра), то есть "Тип \texttt{Email}
 обрабатывается обработчиком"
 
 Создаём связь \texttt{Email}

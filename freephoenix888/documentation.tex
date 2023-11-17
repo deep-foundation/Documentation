@@ -7,6 +7,35 @@
 \usepackage{url}
 \usepackage{titling}
 \usepackage{lipsum} % Для генерации случайного текста
+% Syntax Highlighting
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{babel} 
+\lstdefinelanguage{TypeScript}{
+  keywords=[1]{break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  keywordstyle=[1]\color{blue}\bfseries,
+  keywords=[2]{abstract, as, constructor, declare, enum, export, extends, from, get, implements, import, interface, let, module, private, protected, public, set, static, yield},
+  keywordstyle=[2]\color{teal}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{green!40!black},
+  stringstyle=\color{purple},
+  sensitive=true
+}
+
+\lstset{
+  language=TypeScript,
+  extendedchars=true,
+  basicstyle=\small\ttfamily,
+  showstringspaces=false,
+  showspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  tabsize=2,
+  breaklines=true,
+  showtabs=false
+}
 
 \renewcommand{\contentsname}{Содержание} % Change the name of the table of contents
 
@@ -195,7 +224,7 @@
 
 Пример использования пакета \texttt{@freephoenix888/dependency}:
 
-\begin{verbatim}
+\begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("@freephoenix888/dependency", "Dependency"),
   from_id: await deep.id("deep-memo"),
@@ -214,7 +243,7 @@ await deep.insert({
     ],
   },
 });
-\end{verbatim}
+\end{lstlisting}
 
 % Обработчики
 \subsection{Обработчики}
@@ -250,7 +279,7 @@ await deep.insert({
 
 Создаём \texttt{SyncTextFile} содержащий такой код:
 
-\begin{verbatim}
+\begin{lstlisting}
 ({ data: { newLink: emailLink } }) => {
   const email = doubleLink.value?.value;
   if (!email) {
@@ -260,7 +289,7 @@ await deep.insert({
     throw new Error(`Email ${email} does not include @`);
   }
 };
-\end{verbatim}
+\end{lstlisting}
 
 Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} (из
 \texttt{@deep-foundation/core}), до: наш \texttt{SyncTextFile})
@@ -297,7 +326,7 @@ value)
 \begin{itemize}
   \item Создаём связь \texttt{Email} (тип: \texttt{Type})
   \item Создаём \texttt{SyncTextFile} содержащий такой код:
-        \begin{verbatim}
+        \begin{lstlisting}
     async ({ data: { newLink: emailLink } }) => {
       const email = emailLink.value?.value;
       if (!email) {
@@ -307,7 +336,7 @@ value)
         throw new Error(`Email ${email} does not include @`);
       }
     };
-    \end{verbatim}
+    \end{lstlisting}
   \item Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} (из
         \texttt{@deep-foundation/core}), до: наш \texttt{SyncTextFile})
   \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
@@ -358,11 +387,11 @@ deep-foundation.com/my-path:5000.
 \subparagraph{Обработчик, возвращающий "ok" в любом случае}
 \begin{itemize}
   \item Создать SyncTextFile с таким кодом:
-        \begin{verbatim}
+        \begin{lstlisting}
     () => {
         return "ok";
     }
-    \end{verbatim}
+    \end{lstlisting}
   \item Создать Handler от dockerSupportsJs до нашего SyncTextFile
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
@@ -379,7 +408,7 @@ deep-foundation.com/my-path:5000.
 он true, то мы ответим строкой "ok", иначе "not ok"
 \begin{itemize}
   \item Создать SyncTextFile с таким кодом:
-        \begin{verbatim}
+        \begin{lstlisting}
         async (
           request,
           response,
@@ -390,7 +419,7 @@ deep-foundation.com/my-path:5000.
             response.send("not ok")
           }
         }
-    \end{verbatim}
+    \end{lstlisting}
   \item Создать Handler от dockerSupportsJs до нашего SyncTextFile
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
@@ -459,80 +488,80 @@ Type (на название). Удостоверьтесь, что над пол
 \paragraph{Примеры}
 
 \subparagraph{Вставка связи с типом 1}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.insert({
   type_id: 1,
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Вставка связи с типом Type из пакета @deep-foundation/core}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("@deep-foundation/core", "Type"),
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Вставка связи с типом Reply из пакета messenger}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id(deep.linkId, "Моё сообщение"),
-  to_id: await deep.id(deep.linkId, "Мой диалог"),
+  from_id: await deep.id(deep.linkId, "MyMessage"),
+  to_id: await deep.id(deep.linkId, "MyConversation"),
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Вставка строкового значения для связи 100}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.insert(
   {
     link_id: 100,
-    value: "Моё значение",
+    value: "MyValue",
   },
   {
     table: "strings",
   }
 );
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Получение связей}
 
 \paragraph{Примеры}
 
 \subparagraph{Получение связи с типом 1}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.select({
   type_id: 1,
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Получение связи с типом Type из пакета @deep-foundation/core}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.select({
   type_id: await deep.id("@deep-foundation/core", "Type"),
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Получение связи с типом Reply из пакета messenger}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.select({
   type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id(deep.linkId, "Моё сообщение"),
-  to_id: await deep.id(deep.linkId, "Мой диалог"),
+  from_id: await deep.id(deep.linkId, "MyMessage"),
+  to_id: await deep.id(deep.linkId, "MyConversation"),
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Получение строкового значения для связи 100}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.select(
   {
     link_id: 100,
-    value: "Моё значение",
+    value: "MyValue",
   },
   {
     table: "strings",
   }
 );
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Обновление связей}
 
@@ -542,7 +571,7 @@ await deep.select(
 \paragraph{Примеры}
 
 \subparagraph{Обновление начала}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.update(
   {
     id: 1,
@@ -551,62 +580,62 @@ await deep.update(
     from_id: 5,
   }
 );
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Обновление строкового значения}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.update(
   {
     link_id: 1,
   },
   {
-    value: "Моё новое значение",
+    value: "MyNewValue",
   },
   {
     table: "strings",
   }
 );
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Удаление связей}
 
 \paragraph{Примеры}
 
 \subparagraph{Удаление связи с типом 1}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.delete({
   type_id: 1,
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Удаление связи с типом Type из пакета @deep-foundation/core}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("@deep-foundation/core", "Type"),
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Удаление связи с типом Reply из пакета messenger}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id(deep.linkId, "Моё сообщение"),
-  to_id: await deep.id(deep.linkId, "Мой диалог"),
+  from_id: await deep.id(deep.linkId, "MyMessage"),
+  to_id: await deep.id(deep.linkId, "MyConversation"),
 });
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{Удаление строкового значения для связи 100}
-\begin{verbatim}
+\begin{lstlisting}
 await deep.delete(
   {
     link_id: 100,
-    value: "Моё значение",
+    value: "MyValue",
   },
   {
     table: "strings",
   }
 );
-\end{verbatim}
+\end{lstlisting}
 
 % Таблицы
 \subsection{Таблицы}

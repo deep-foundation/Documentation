@@ -687,14 +687,19 @@ await deep.delete(
 \paragraph*{SyncTextFile}  
 Тип SyncTextFile\hypertarget{SyncTextFile.Def}{} используется для хранения любого строкового значения
 \paragraph*{Any}  
-Тип Any\hypertarget{any.def}{} может использоваться для ограничения начала/конца типа.
+Тип Any\hypertarget{any.def}{} может использоваться для ограничений
+\subparagraph*{Начало/конец типа}
 Например есть при создании типа А вы можете указать, что его началом обязательно должен быть Б, а концом может быть любая связь, для этого концом у типа будет указан Any
+\subparagraph*{Обрабатываемый тип}
+Any может использоваться как обрабатываемый тип, в таком случае обработчик будет обрабатывать экземпляры всех типов
 \paragraph*{Handler}  
 Тип Handler\hypertarget{handler.def}{} используется для создания обработчика. Его началом является экземпляр \hyperlink{supports.def}{Supports}, а концом любая связь, содержащая код в строковом значении
 \paragraph*{Supports}  
 Тип Supports\hypertarget{handler.def}{} используется для создания среды выполнения обработчика. Примером среды выполнения обработчика является \hyperlink{dockerSupportsJs.def}{dockerSupportsJs}
 \paragraph*{dockerSupportsJs}  
 Связь dockerSupportsJs\hypertarget{dockerSupportsJs.def}{} используется для поддержки JavaScript в Docker. Что бы использовать эту среду для обработчика, нужно сделать эту связь началом связи \hyperlink{handler.def}{Handler}
+\paragraph*{HandleUpdate}  
+Связь HandleUpdate\hypertarget{HandleUpdate.Def}{} используется для обработки обновлений экземпляров определённого типа. Например, что бы обрабатывать обновления экземпляров типа \hyperlink{type.def}{Type}, нужно создать HandleUpdate с началом типом \hyperlink{type.def}{Type} и концом обработчиком, то есть экземпляром \hyperlink{handler.def}{Handler}
 
 
 % Таблицы

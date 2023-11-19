@@ -4,9 +4,9 @@
 \usepackage{graphicx}	     % Required for inserting images
 \usepackage{titletoc}
 \usepackage{listings}
-\usepackage{url}
 \usepackage{titling}
 \usepackage{textcomp}
+\usepackage{hyperref}
 \usepackage{lipsum} % Для генерации случайного текста
 % Syntax Highlighting
 \usepackage{xcolor}
@@ -85,8 +85,7 @@
                 должен вести от экземпляра связи А к экземпляру связи Б
           \item Если нужно что бы экземпляр связи мог быть связан с любой
                 связью,
-                то нужно использовать встроенный тип Any из пакета
-                @deep-foundation/core
+                то нужно использовать встроенный тип \hyperlink{any.def}{Any}
         \end{itemize}
 
   \item \textbf{Пакеты:}
@@ -189,9 +188,9 @@
 \paragraph{Пример}
 
 \begin{itemize}
-  \item \texttt{Message (type: Type)}
-  \item \texttt{Conversation(type: Type)}
-  \item \texttt{Reply(type: Type, from: Message, to: Conversation)}
+  \item \texttt{Message (type: \hyperlink{type.def}{Type})}
+  \item \texttt{Conversation(type: \hyperlink{type.def}{Type})}
+  \item \texttt{Reply(type: \hyperlink{type.def}{Type}, from: Message, to: Conversation)}
   \item \texttt{UrgentMessage(type: Message)}
   \item \texttt{UrgentReply(type: Reply, from: UrgentMessage, to:
           Conversation)}
@@ -206,29 +205,29 @@
 Если связь является связью между двумя определёнными типами - вы сможете
 вставить связь только между связями этих определённых типов
 Совет: если связь должна вести от/до неопределённого типа связи, то следует
-использовать встроенный тип Any из пакета @deep-foundation/core
+использовать встроенный тип \hyperlink{any.def}{Any}
 \paragraph{Примеры}
 \subparagraph{Пример с связью точкой}
 \begin{enumerate}
-  \item Вставьте связь типа Type без начала и конца
+  \item Вставьте связь типа \hyperlink{type.def}{Type} без начала и конца
   \item Вставьте связь типа "Ваш тип" без начала и конца
 \end{enumerate}
 \subparagraph{Пример с связью между определёнными связями}
 \begin{enumerate}
-  \item Вставьте связь типа Type от Package до User
+  \item Вставьте связь типа \hyperlink{type.def}{Type} от Package до User
   \item Вставьте связь вашего типа от экземпляра Package до экземпляра User
   \item Попробуйте вставить связь вашего типа от экземпляра не Package до
         экземпляра не User, и увидите ошибку
 \end{enumerate}
 \subparagraph{Пример с связью между Any и User}
 \begin{enumerate}
-  \item Вставьте связь типа Type от Any до User
+  \item Вставьте связь типа \hyperlink{type.def}{Type} от Any до User
   \item Вставьте связь вашего типа от любой связи до экземпляра User и
         созерцайте, что начало вашей связи может быть любым
 \end{enumerate}
 \subparagraph{Пример с связью между Any и Any}
 \begin{enumerate}
-  \item Вставьте связь типа Type от Any до Any
+  \item Вставьте связь типа \hyperlink{type.def}{Type} от Any до Any
   \item Вставьте связь вашего типа от любой связи до любой связи и
         созерцайте, что начало и конец вашей связи может быть любым
 \end{enumerate}
@@ -297,7 +296,7 @@ await deep.insert({
 транзакция отменяется
 \subparagraph{Примеры}
 
-Создаём связь \texttt{Email} (тип: \texttt{Type})
+Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{type.def}{Type}})
 
 Создаём \texttt{SyncTextFile} содержащий такой код:
 
@@ -313,8 +312,7 @@ await deep.insert({
 };
 \end{lstlisting}
 
-Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} (из
-\texttt{@deep-foundation/core}), до: наш \texttt{SyncTextFile})
+Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs}, до: наш \texttt{SyncTextFile})
 
 Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
 \texttt{Handler})
@@ -360,7 +358,7 @@ promiseTree от связи-триггера. В визуальном интер
 \subparagraph{Примеры:}
 
 \begin{itemize}
-  \item Создаём связь \texttt{Email} (тип: \texttt{Type})
+  \item Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{type.def}{Type}})
   \item Создаём \texttt{SyncTextFile} содержащий такой код:
         \begin{lstlisting}
 async ({ data: { newLink: emailLink } }) => {
@@ -373,8 +371,7 @@ async ({ data: { newLink: emailLink } }) => {
   }
 };
 \end{lstlisting}
-  \item Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} (из
-        \texttt{@deep-foundation/core}), до: наш \texttt{SyncTextFile})
+  \item Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} , до: наш \texttt{SyncTextFile})
   \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
         \texttt{Handler})
         \begin{verbatim}
@@ -470,20 +467,20 @@ async (
 
 \paragraph{Справочник}
 \subparagraph{Параметры обработчика}
+
+\urldef{\requrl}\url{https://expressjs.com/en/api.html#req}
+\urldef{\resurl}\url{https://expressjs.com/en/api.html#res}
+\urldef{\midwareurl}\url{https://expressjs.com/en/guide/using-middleware.html}
+
 \begin{enumerate}
-  \item \texttt{Объект, который представляет HTTP-запрос и имеет свойства для
-          строки запроса, параметров, тела, HTTP-заголовков и т. д. Подробное
-          описание:
-          \url{https://expressjs.com/en/api.html#req}}
-  \item \texttt{Объект, который представляет HTTP-ответ, который приложение
-          Express отправляет при получении HTTP-запроса. Подробное описание:
-          \url{https://expressjs.com/en/api.html#res}}
+  \item \texttt{Объект, который представляет HTTP-запрос и имеет свойства для строки запроса, параметров, тела, HTTP-заголовков и т. д. Подробное описание: \requrl}
+  \item \texttt{Объект, который представляет HTTP-ответ, который приложение Express отправляет при получении HTTP-запроса. Подробное описание: \resurl}
   \item Объект, содержащий поля:
-        \subitem{deep} Дип Клиент
-        \subitem{require} - функция для импортирования npm пакетов
-        \subitem{next} - функция для передачи работы другому обработчику.
-        Подробное описание:
-        \url{https://expressjs.com/en/guide/using-middleware.html}
+        \begin{enumerate}
+           \item \texttt{deep} Дип Клиент
+           \item \texttt{require} - функция для импортирования npm пакетов
+           \item \texttt{next} - функция для передачи работы другому обработчику. Подробное описание: \midwareurl 
+        \end{enumerate}
 \end{enumerate}
 \subsection{DeepCase (графический визуальный интерфейс Deep)}
 \subsubsection{Описание}
@@ -502,15 +499,15 @@ DeepCase это npm пакет, который позволяет встраив
 месте и в открытом контекстном меню нажать на "Insert". После этого откроется
 меню вставки связи, в котором есть поле для ввода что бы фильтровать связи по
 названию, а так же сами связи ниже поля для ввода. Введите название нужной
-связи, например Type и ниже найдите связь с таким названием. Вы можете
-заметить, что там есть как минимум два Type, один со значком звёздочки, а
+связи, например \hyperlink{type.def}{Type} и ниже найдите связь с таким названием. Вы можете
+заметить, что там есть как минимум два \hyperlink{type.def}{Type}, один со значком звёздочки, а
 другой со значком папки. Связь с значком папки это Contain, следовательно нажав
 на стрелку влево около этой связи, мы сможем увидеть откуда ведёт Contain
 (после нажатия активная связь появляется над полем для ввода), а нажав на
 стрелку вправо сможем увидеть на какую связь указывает Contain, следовательно
 Contain будет указывать на ту самую связь со звёздочкой, то есть вы можете
-выбрать Type либо нажав на стрелку вправо у его Contain'a, либо нажав на сам
-Type (на название). Удостоверьтесь, что над полем для ввода отображается нужная
+выбрать \hyperlink{type.def}{Type} либо нажав на стрелку вправо у его Contain'a, либо нажав на сам
+\hyperlink{type.def}{Type} (на название). Удостоверьтесь, что над полем для ввода отображается нужная
 связь и после этого нажмите на галочку справа внизу от меню вставки, что бы
 активировать вставку этой связи. После этого вы увидите уведомление слева внизу
 о том, что вы сейчас вставляете связь определённого типа, а так же сказано
@@ -537,7 +534,7 @@ await deep.insert({
 });
 \end{lstlisting}
 
-\subparagraph{Вставка связи с типом Type из пакета @deep-foundation/core}
+\subparagraph{Вставка связи с типом \hyperlink{type.def}{Type}}
 \begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -577,7 +574,7 @@ await deep.select({
 });
 \end{lstlisting}
 
-\subparagraph{Получение связи с типом Type из пакета @deep-foundation/core}
+\subparagraph{Получение связи с типом \hyperlink{type.def}{Type}}
 \begin{lstlisting}
 await deep.select({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -642,47 +639,55 @@ await deep.update(
 
 \subsubsection{Удаление связей}
 
-\paragraph{Примеры}
+\paragraph{Примеры \\} 
 
-\subparagraph{Удаление связи с типом 1}
-\leavevmode
+Удаление связи с типом 1
+
 \begin{lstlisting}
 await deep.delete({
   type_id: 1,
 });
 \end{lstlisting}
 
-\subparagraph{Удаление связи с типом Type из пакета @deep-foundation/core}
-\leavevmode
+Удаление связи с типом \hyperlink{type.def}{Type}
+
 \begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("@deep-foundation/core", "Type"),
 });
 \end{lstlisting}
 
-\subparagraph{Удаление связи с типом Reply из пакета messenger}
-\leavevmode
+Удаление связи с определённым типом, началом, концом
 \begin{lstlisting}
 await deep.delete({
-  type_id: await deep.id("messenger", "Reply"),
-  from_id: await deep.id("MyPackageName", "MyMessage"),
-  to_id: await deep.id("MyPackageName", "MyConversation"),
+  type_id: 5,
+  from_id: 10,
+  to_id: 15,
 });
 \end{lstlisting}
 
-\subparagraph{Удаление строкового значения для связи 100}
-\leavevmode
+Удаление строкового значения для связи 100
 \begin{lstlisting}
 await deep.delete(
   {
     link_id: 100,
-    value: "MyValue",
   },
   {
     table: "strings",
   }
 );
 \end{lstlisting}
+
+\subsection{@deep-foundation/core}
+\subsubsection{Описание}
+@deep-foundation/core\hypertarget{core.def}{} это встроенный пакет, которые содержит самые важные типы для работы с Deep
+\subsubsection{Типы}
+\paragraph*{Type}  
+Тип Type\hypertarget{type.def}{} используется для создания новых типов
+\paragraph*{Any}  
+Тип Any\hypertarget{any.def}{} может использоваться для ограничения начала/конца типа.
+Например есть при создании типа А вы можете указать, что его началом обязательно должен быть Б, а концом может быть любая связь, для этого концом у типа будет указан Any
+
 
 % Таблицы
 \subsection{Таблицы}
@@ -722,5 +727,6 @@ numbers, strings, objects (для хранения значений привяз
      % 2 & Изменены требования к системе & 05.02.2023 \\
   \end{tabular}
 \end{table}
+
 
 \end{document}

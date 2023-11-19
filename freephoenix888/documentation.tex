@@ -698,8 +698,12 @@ Any может использоваться как обрабатываемый 
 Тип Supports\hypertarget{handler.def}{} используется для создания среды выполнения обработчика. Примером среды выполнения обработчика является \hyperlink{dockerSupportsJs.def}{dockerSupportsJs}
 \paragraph*{dockerSupportsJs}  
 Связь dockerSupportsJs\hypertarget{dockerSupportsJs.def}{} используется для поддержки JavaScript в Docker. Что бы использовать эту среду для обработчика, нужно сделать эту связь началом связи \hyperlink{handler.def}{Handler}
+\paragraph*{HandleInsert}  
+Связь HandleInsert\hypertarget{HandleInsert.Def}{} используется для обработки вставки экземпляров определённого типа. Например, что бы обрабатывать вставку экземпляров типа \hyperlink{type.def}{Type}, нужно создать HandleInsert с началом типом \hyperlink{type.def}{Type} и концом обработчиком, то есть экземпляром \hyperlink{handler.def}{Handler}
 \paragraph*{HandleUpdate}  
 Связь HandleUpdate\hypertarget{HandleUpdate.Def}{} используется для обработки обновлений экземпляров определённого типа. Например, что бы обрабатывать обновления экземпляров типа \hyperlink{type.def}{Type}, нужно создать HandleUpdate с началом типом \hyperlink{type.def}{Type} и концом обработчиком, то есть экземпляром \hyperlink{handler.def}{Handler}
+\paragraph*{HandleUpdate}  
+Связь HandleDelete\hypertarget{HandleDelete.Def}{} используется для обработки удалений экземпляров определённого типа. Например, что бы обрабатывать удаления экземпляров типа \hyperlink{type.def}{Type}, нужно создать HandleDelete с началом типом \hyperlink{type.def}{Type} и концом обработчиком, то есть экземпляром \hyperlink{handler.def}{Handler}
 
 
 % Таблицы

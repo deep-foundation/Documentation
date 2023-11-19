@@ -312,7 +312,7 @@ await deep.insert({
 };
 \end{lstlisting}
 
-Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs}, до: наш \texttt{SyncTextFile})
+Создаём \texttt{Handler} (от: \hyperlink{dockerSupportsJs.def}{dockerSupportsJs}, до: наш \texttt{SyncTextFile})
 
 Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
 \texttt{Handler})
@@ -371,7 +371,7 @@ async ({ data: { newLink: emailLink } }) => {
   }
 };
 \end{lstlisting}
-  \item Создаём \texttt{Handler} (от: \texttt{dockerSupportsJs} , до: наш \texttt{SyncTextFile})
+  \item Создаём \texttt{Handler} (от: \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} , до: наш \texttt{SyncTextFile})
   \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
         \texttt{Handler})
         \begin{verbatim}
@@ -426,7 +426,7 @@ deep-foundation.com/my-path:5000.
     response.send("ok");
 }
 \end{lstlisting}
-  \item Создать Handler от dockerSupportsJs до нашего SyncTextFile
+  \item Создать Handler от \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} до нашего SyncTextFile
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
   \item Создать Router
@@ -454,7 +454,7 @@ async (
   }
 }
 \end{lstlisting}
-  \item Создать Handler от dockerSupportsJs до нашего SyncTextFile
+  \item Создать Handler от \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} до нашего SyncTextFile
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
   \item Создать Router
@@ -681,12 +681,18 @@ await deep.delete(
 \subsection{@deep-foundation/core}
 \subsubsection{Описание}
 @deep-foundation/core\hypertarget{core.def}{} это встроенный пакет, которые содержит самые важные типы для работы с Deep
-\subsubsection{Типы}
+\subsubsection{Связи}
 \paragraph*{Type}  
 Тип Type\hypertarget{type.def}{} используется для создания новых типов
 \paragraph*{Any}  
 Тип Any\hypertarget{any.def}{} может использоваться для ограничения начала/конца типа.
 Например есть при создании типа А вы можете указать, что его началом обязательно должен быть Б, а концом может быть любая связь, для этого концом у типа будет указан Any
+\paragraph*{Handler}  
+Тип Handler\hypertarget{handler.def}{} используется для создания обработчика. Его началом является экземпляр \hyperlink{supports.def}{Supports}, а концом любая связь, содержащая код в строковом значении
+\paragraph*{Supports}  
+Тип Supports\hypertarget{handler.def}{} используется для создания среды выполнения обработчика. Примером среды выполнения обработчика является \hyperlink{dockerSupportsJs.def}{dockerSupportsJs}
+\paragraph*{dockerSupportsJs}  
+Связь dockerSupportsJs\hypertarget{dockerSupportsJs.def}{} используется для поддержки JavaScript в Docker. Что бы использовать эту среду для обработчика, нужно сделать эту связь началом связи \hyperlink{handler.def}{Handler}
 
 
 % Таблицы

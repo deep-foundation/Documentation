@@ -492,14 +492,14 @@ async (
 \urldef{\midwareurl}\url{https://expressjs.com/en/guide/using-middleware.html}
 
 \begin{enumerate}
-  \item \texttt{Объект, который представляет HTTP-запрос и имеет свойства для
+  \item{request} \texttt{Объект, который представляет HTTP-запрос и имеет свойства для
           строки запроса, параметров, тела, HTTP-заголовков и т. д. Подробное
           описание:
           \requrl}
-  \item \texttt{Объект, который представляет HTTP-ответ, который приложение
+  \item{response} \texttt{Объект, который представляет HTTP-ответ, который приложение
           Express отправляет при получении HTTP-запроса. Подробное описание:
           \resurl}
-  \item Объект, содержащий поля:
+  \item{otherArgs} Объект, содержащий поля:
         \begin{enumerate}
           \item \texttt{deep} Дип Клиент
           \item \texttt{require} - функция для импортирования npm пакетов

@@ -298,7 +298,7 @@ await deep.insert({
 
 Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{type.def}{Type}})
 
-Создаём \texttt{SyncTextFile} содержащий такой код:
+Создаём \hyperlink{SyncTextFile.Def}{SyncTextFile} содержащий такой код:
 
 \begin{lstlisting}
 ({ data: { newLink: emailLink } }) => {
@@ -312,7 +312,7 @@ await deep.insert({
 };
 \end{lstlisting}
 
-Создаём \texttt{Handler} (от: \hyperlink{dockerSupportsJs.def}{dockerSupportsJs}, до: наш \texttt{SyncTextFile})
+Создаём \texttt{Handler} (от: \hyperlink{dockerSupportsJs.def}{dockerSupportsJs}, до: наш \hyperlink{SyncTextFile.Def}{SyncTextFile})
 
 Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
 \texttt{Handler})
@@ -359,7 +359,7 @@ promiseTree от связи-триггера. В визуальном интер
 
 \begin{itemize}
   \item Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{type.def}{Type}})
-  \item Создаём \texttt{SyncTextFile} содержащий такой код:
+  \item Создаём \hyperlink{SyncTextFile.Def}{SyncTextFile} содержащий такой код:
         \begin{lstlisting}
 async ({ data: { newLink: emailLink } }) => {
   const email = emailLink.value?.value;
@@ -371,7 +371,7 @@ async ({ data: { newLink: emailLink } }) => {
   }
 };
 \end{lstlisting}
-  \item Создаём \texttt{Handler} (от: \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} , до: наш \texttt{SyncTextFile})
+  \item Создаём \texttt{Handler} (от: \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} , до: наш \hyperlink{SyncTextFile.Def}{SyncTextFile})
   \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
         \texttt{Handler})
         \begin{verbatim}
@@ -420,13 +420,13 @@ deep-foundation.com/my-path:5000.
 \paragraph{Примеры}
 \subparagraph{Обработчик, возвращающий "ok" в любом случае}
 \begin{itemize}
-  \item Создать SyncTextFile с таким кодом:
+  \item Создать \hyperlink{SyncTextFile.Def}{SyncTextFile} с таким кодом:
         \begin{lstlisting}
 (request, response) => {
     response.send("ok");
 }
 \end{lstlisting}
-  \item Создать Handler от \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} до нашего SyncTextFile
+  \item Создать Handler от \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} до нашего \hyperlink{SyncTextFile.Def}{SyncTextFile}
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
   \item Создать Router
@@ -441,7 +441,7 @@ deep-foundation.com/my-path:5000.
 В данном примере обработчик будет проверять поле isOk в входящем запрос, если
 он true, то мы ответим строкой "ok", иначе "not ok"
 \begin{itemize}
-  \item Создать SyncTextFile с таким кодом:
+  \item Создать \hyperlink{SyncTextFile.Def}{SyncTextFile} с таким кодом:
         \begin{lstlisting}
 async (
   request,
@@ -454,7 +454,7 @@ async (
   }
 }
 \end{lstlisting}
-  \item Создать Handler от \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} до нашего SyncTextFile
+  \item Создать Handler от \hyperlink{dockerSupportsJs.def}{dockerSupportsJs} до нашего \hyperlink{SyncTextFile.Def}{SyncTextFile}
   \item Создать Route
   \item Создать HandleRoute от нашего Route до нашего Handler
   \item Создать Router
@@ -684,6 +684,8 @@ await deep.delete(
 \subsubsection{Связи}
 \paragraph*{Type}  
 Тип Type\hypertarget{type.def}{} используется для создания новых типов
+\paragraph*{SyncTextFile}  
+Тип SyncTextFile\hypertarget{SyncTextFile.Def}{} используется для хранения любого строкового значения
 \paragraph*{Any}  
 Тип Any\hypertarget{any.def}{} может использоваться для ограничения начала/конца типа.
 Например есть при создании типа А вы можете указать, что его началом обязательно должен быть Б, а концом может быть любая связь, для этого концом у типа будет указан Any

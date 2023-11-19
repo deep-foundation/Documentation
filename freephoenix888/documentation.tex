@@ -737,6 +737,24 @@ await deep.delete(
 );
 \end{lstlisting}
 
+\subsubsection{deep.id}
+У Дип Клиента есть метод id, который позволяет получить идентификатор связи, используя название пакета/пользователя и название связи
+\paragraph{Примеры}
+\subparagraph{Получение связи MyType из пакета MyPackage}
+\begin{lstlisting}
+  await deep.id("MyPackage", "MyType");
+\end{lstlisting}
+
+\subparagraph{Получение пакета MyPackage}
+\begin{lstlisting}
+  await deep.id("MyPackage");
+\end{lstlisting}
+
+\subparagraph{Получение связи C, которая вложена в B, которая вложена в A}
+\begin{lstlisting}
+  await deep.id("A", "B", "C");
+\end{lstlisting}
+
 \subsection{@deep-foundation/core}
 \subsubsection{Описание}
 @deep-foundation/core\hypertarget{core.Def}{} это встроенный пакет, которые

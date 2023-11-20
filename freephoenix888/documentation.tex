@@ -202,7 +202,10 @@
 Если у типа начало это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может иметь начало в виде любой связи. \\
 Если у типа конец это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может иметь конец в виде любой связи. \\
 
-\subsubsection{Примеры}
+\subsubsection{Пример}
+\begin{itemize}
+  \item 
+\end{itemize}
 \subparagraph{Пример с связью точкой}
 \begin{enumerate}
   \item Вставьте связь типа \hyperlink{type.Def}{Type} без начала и конца
@@ -940,13 +943,22 @@ numbers, strings, objects (для хранения значений привяз
 \end{itemize}
 
 \subsubsection{Часто задаваемые вопросы}
-\paragraph{Как дать название связи}
+\paragraph{Как дать название связи?}
 \hypertarget{FAQ.HowToSetName}{Что бы дать название связи}, нужно изменить значение \hyperlink{Contain.Def}{Contain} связи, которая указывает на вашу связь. \\
 \textbf{Исключения:} 
 \begin{itemize}
   \item \hyperlink{Package.Def}{Package}
   \item \hyperlink{Package.Def}{User}
 \end{itemize}
+\paragraph{Как вставить связь без начала и конца?}\hypertarget{FAQ.HowToInsertLinkWithoutFromAndTo}{}
+\subparagraph{В DeepCase}
+При \hyperlink{DeepCase.InsertLink.Def}{вставке связи} нажмите в пустом месте
+\subparagraph{Программно}
+\begin{verbatim}
+await deep.insert({
+  type_id: await deep.id("@deep-foundation/core", "Type"), // from_id и to_id не указаны
+});
+\end{verbatim}
 
 \section{Часть регистрации изменений}
 

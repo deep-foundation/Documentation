@@ -180,17 +180,35 @@
 
 \subsubsection{Пример}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её Conversation
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
-  \hyperlink{FAQ.HowToSetName}{назовите} её Message
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} от Message до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её Reply
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа Reply от Message до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её UrgentMessage
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа Reply от UrgentMessage до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её UrgentReply
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{Core.Value.Def}{Value} от UrgentMessage до \hyperlink{Core.String.Def}{String}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Conversation} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{UrgentMessage} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
-  \item \hyperlink{DeepCase.UpdateLink.Def}{Обновите} экземпляр связи UrgentMessage
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа UrgentReply от UrgentMessage до Conversation
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её Conversation
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её Message
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} от Message до Conversation и
+        \hyperlink{FAQ.HowToSetName}{назовите} её Reply
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа Reply от
+        Message до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её
+        UrgentMessage
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа Reply от
+        UrgentMessage до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её
+        UrgentReply
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Core.Value.Def}{Value} от UrgentMessage до
+        \hyperlink{Core.String.Def}{String}
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Conversation}
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{UrgentMessage}
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+  \item \hyperlink{DeepCase.UpdateLink.Def}{Обновите} экземпляр связи
+        UrgentMessage
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа UrgentReply от
+        UrgentMessage до Conversation
 \end{itemize}
 
 \subsection{Связи-типы}
@@ -198,87 +216,215 @@
 Любая связь может быть типом для вставки другой связи. \\
 Тип задаёт ограничение для экземпляров этого типа. \\
 Если у типа нет начала или конца - у экземпляра его тоже не будет. \\
-Если у типа начало это связь А, а конец это связь Б, то экземпляр должен иметь начало в виде экземпляра связи А, а конец в виде экземпляра связи Б. \\
-Если у типа начало это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может иметь начало в виде любой связи. \\
-Если у типа конец это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может иметь конец в виде любой связи. \\
+Если у типа начало это связь А, а конец это связь Б, то экземпляр должен иметь
+начало в виде экземпляра связи А, а конец в виде экземпляра связи Б. \\
+Если у типа начало это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может
+иметь начало в виде любой связи. \\
+Если у типа конец это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может
+иметь конец в виде любой связи. \\
 
 \subsubsection{Примеры}
 \paragraph{Тип без начала и конца}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
 \end{itemize}
 \subparagraph{Тип с определёнными началом и концом}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode3
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом MyMode1 и концом MyNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её MyLink
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode3 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode3
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode3} и увидите ошибку, потому что вы выставили такое ограчничение: экземпляры MyLink должен иметь начало в виде экземпляра  MyNode1, а конец в виде экземпляра MyNode2, следовательно вы не можете использовать экземпляр MyNode3 как конец
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode3
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+          началом MyMode1 и концом MyNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её
+        MyLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode3
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode3
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode3} и увидите ошибку, потому что вы выставили такое ограчничение:
+        экземпляры MyLink должен иметь начало в виде экземпляра  MyNode1, а конец в
+        виде экземпляра MyNode2, следовательно вы не можете использовать экземпляр
+        MyNode3 как конец
 \end{itemize}
 \subparagraph{Тип между Any и определённым концом}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом Any и концом MyNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её MyLink
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр MyNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр MyNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и увидите ошибку, потому что вы выставили такое ограчничение: экземпляры MyLink могут иметь начало в виде экземпляра любого типа, а конец должен быть в виде экземпляра MyNode1, следовательно вы не можете использовать экземпляр MyNode2 как конец
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+          началом Any и концом MyNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её
+        MyLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        любого типа, конец - экземпляр MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом
+          myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        любого типа, конец - экземпляр MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode2} и увидите ошибку, потому что вы выставили такое ограчничение:
+        экземпляры MyLink могут иметь начало в виде экземпляра любого типа, а конец
+        должен быть в виде экземпляра MyNode1, следовательно вы не можете использовать
+        экземпляр MyNode2 как конец
 \end{itemize}
 \subparagraph{Тип между определённым началом и концом Any}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом MyNode1 и концом Any} и \hyperlink{FAQ.HowToSetName}{назовите} её MyLink
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр MyNode1, конец - экземпляр любого типа
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и увидите ошибку, потому что вы выставили такое ограчничение: экземпляры MyLink должны иметь начало в виде экземпляра MyNode1, а конец может быть в виде экземпляра любого типа, следовательно вы не можете использовать экземпляр MyNode2 как начало
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр MyNode1, конец - экземпляр любого типа
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+          началом MyNode1 и концом Any} и \hyperlink{FAQ.HowToSetName}{назовите} её
+        MyLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        MyNode1, конец - экземпляр любого типа
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом
+          myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и увидите ошибку,
+        потому что вы выставили такое ограчничение: экземпляры MyLink должны иметь
+        начало в виде экземпляра MyNode1, а конец может быть в виде экземпляра любого
+        типа, следовательно вы не можете использовать экземпляр MyNode2 как начало
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode2} и не увидите ошибку, потому что ограничение типа MyLink удовлетворено:
+        начало - экземпляр MyNode1, конец - экземпляр любого типа
 \end{itemize}
 \subparagraph{Тип между Any и Any}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом Any и концом Any} и \hyperlink{FAQ.HowToSetName}{назовите} её MyLink
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2 \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр любого типа
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр любого типа
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр любого типа
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр любого типа
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+          началом Any и концом Any} и \hyperlink{FAQ.HowToSetName}{назовите} её MyLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        любого типа, конец - экземпляр любого типа
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом
+          myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        любого типа, конец - экземпляр любого типа
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом
+          myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        любого типа, конец - экземпляр любого типа
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink
+        \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом
+          myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите
+        ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр
+        любого типа, конец - экземпляр любого типа
 \end{itemize}
 % Пакеты
 \subsection{Пакеты}
 \subsubsection{Описание}
-Пакет предназначены для упаковки связей вместе в одну связь, которую можно выложить, скачать, точно так-же, как вы устанавливаете какое либо программное обеспечение состоящее из различных файлов. \\
+Пакет предназначены для упаковки связей вместе в одну связь, которую можно
+выложить, скачать, точно так-же, как вы устанавливаете какое либо программное
+обеспечение состоящее из различных файлов. \\
 Пакет это тоже связь, экземпляр \hyperlink{Core.Package}{Package} \\
-Принадлежность связи к пакету определяется с помощью экземпляра \hyperlink{Contain.Def}{Contain}. То есть что бы ваша связь находилась в пакетее - нужно иметь экземпляр \hyperlink{Core.Contain.Def}{Contain}, ведущий от пакета к связи \\
-Если связь пакета А указывает началом/концом/типом на связь пакета Б, то пакет А становится зависимым от пакета Б \\
+Принадлежность связи к пакету определяется с помощью экземпляра
+\hyperlink{Contain.Def}{Contain}. То есть что бы ваша связь находилась в
+пакетее - нужно иметь экземпляр \hyperlink{Core.Contain.Def}{Contain}, ведущий
+от пакета к связи \\
+Если связь пакета А указывает началом/концом/типом на связь пакета Б, то пакет
+А становится зависимым от пакета Б \\
 \subsubsection{Примеры}
 \subparagraph{Создание пакета}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{Core.Package.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Core.Package.Def}{Type}
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage
 \end{itemize}
 \subparagraph{Добавление связи в пакет}
 \begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{Core.Package.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage. Кстати, теперь ваш пакет зависит от пакета \hyperlink{Core.Def}{@deep-foundation/core}, потому что использует его связь \hyperlink{Core.Type.Def}{Type} как тип для нашей связи
-  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Core.Package.Def}{Type}
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
+        \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage. Кстати, теперь ваш пакет
+        зависит от пакета \hyperlink{Core.Def}{@deep-foundation/core}, потому что
+        использует его связь \hyperlink{Core.Type.Def}{Type} как тип для нашей связи
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+          начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
 \end{itemize}
 \subparagraph{Публикация пакета}
 \begin{itemize}
-  \item Что бы опубликовать пакет нужно \hyperlink{DeepCase.InsertLink.Def}{вставить} связь типа \hyperlink{NpmPackager.Token.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и дать ей значение равное вашему токену из npm, который вы можете получить на \url{https://www.npmjs.com/}
-  \item Нажмите левой кнопкой мыши на MyPackage и увидите клиентский обработчик, показывающий визуализацию для пакета. Введите название и версию пакета и нажмите кнопку Save, а затем Publish
-  \item Теперь нам нужно увидеть связь Publish, которая создалась благодаря нажатию на кнопку Publish. Откройте контекстное меню MyPackage, нажмите Traveller, затем TODO: В разработке % TODO:
-  \item Что бы увидеть результат выполнения обработчика выкладывания пакета - откройте контекстное меню Publish, нажмите Traveller, затем затем Down, затем promiseTree, и вы увидите всё, что ниже по дереву promiseTree, то есть результаты всех асинхронных обработчиков, в данном случае одного
+  \item Что бы опубликовать пакет нужно
+        \hyperlink{DeepCase.InsertLink.Def}{вставить} связь типа
+        \hyperlink{NpmPackager.Token.Def}{Type}
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и дать ей
+        значение равное вашему токену из npm, который вы можете получить на
+        \url{https://www.npmjs.com/}
+  \item Нажмите левой кнопкой мыши на MyPackage и увидите клиентский
+        обработчик, показывающий визуализацию для пакета. Введите название и версию
+        пакета и нажмите кнопку Save, а затем Publish
+  \item Теперь нам нужно увидеть связь Publish, которая создалась благодаря
+        нажатию на кнопку Publish. Откройте контекстное меню MyPackage, нажмите
+        Traveller, затем TODO: В разработке % TODO:
+  \item Что бы увидеть результат выполнения обработчика выкладывания пакета -
+        откройте контекстное меню Publish, нажмите Traveller, затем затем Down, затем
+        promiseTree, и вы увидите всё, что ниже по дереву promiseTree, то есть
+        результаты всех асинхронных обработчиков, в данном случае одного
 \end{itemize}
-
 
 % Обработчики
 \subsection{Обработчики}
@@ -460,7 +606,8 @@ deep-foundation.com/my-path:5000.
         \hyperlink{Route.Def}{Route} до нашего \hyperlink{Handler.Def}{Handler}
   \item Создать \hyperlink{Router.Def}{Router}
   \item Создать \hyperlink{RouterStringUse.Def}{RouterStringUse} от нашего
-        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Router.Def}{Router}, с
+        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Router.Def}{Router},
+        с
         значением
         веб-маршрута, который должен обрабатываться, например /my-path
   \item Создать \hyperlink{Port.Def}{Port} с значением порта, который должен
@@ -495,7 +642,8 @@ async (
         \hyperlink{Route.Def}{Route} до нашего \hyperlink{Handler.Def}{Handler}
   \item Создать \hyperlink{Router.Def}{Router}
   \item Создать \hyperlink{RouterStringUse.Def}{RouterStringUse} от нашего
-        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Router.Def}{Router}, с
+        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Router.Def}{Router},
+        с
         значением
         веб-маршрута, который должен обрабатываться, например /my-path
   \item Создать \hyperlink{Port.Def}{Port} с значением порта, который должен
@@ -553,7 +701,8 @@ DeepCase\hypertarget{DeepCase.Def}{} является графическим в�
 Визуализация конкретных связей реализована при помощи клиентских обработчиков.
 Что бы увидеть визуализацию связи, нужно нажать на неё
 \paragraph{Вставить связь}
-Для того, что бы \hypertarget{DeepCase.InsertLink.Def}{вставить связь}, нужно нажать правкую кнопку мыши в пустом
+Для того, что бы \hypertarget{DeepCase.InsertLink.Def}{вставить связь}, нужно
+нажать правкую кнопку мыши в пустом
 месте и в открытом контекстном меню нажать на "Insert". После этого откроется
 меню вставки связи, в котором есть поле для ввода что бы фильтровать связи по
 названию, а так же сами связи ниже поля для ввода. Введите название нужной
@@ -712,40 +861,57 @@ HandleUpdate с началом типом \hyperlink{type.Def}{Type} и конц
 \subsubsection{Примеры}
 \paragraph{Создание дерева}
 \begin{itemize}
-  \item Создаём связь \hyperlink{Tree}{Tree} с названием myTree
-  \item Создаём связь типа \hyperlink{Type.Def}{Type}, с названием MyNode1
-  \item Создаём экземпляр MyNode1
-  \item Создаём связь типа \hyperlink{Type.Def}{Type}, с названием MyNode2
-  \item Создаём экземпляр MyNode2
-  \item Создаём связь типа \hyperlink{Type.Def}{Type}, с началом \hyperlink{Core.Any.Def}{Any}, концом
-        \hyperlink{Core.Any.Def}{Any}, с названием MyDownLink
-  \item Создаём экземпляр MyDownLink
-  \item Создаём связь типа \hyperlink{Type.Def}{Type}, с началом \hyperlink{Core.Any.Def}{Any}, концом
-        \hyperlink{Core.Any.Def}{Any}, с названием MyUpLink
-  \item Создаём связь \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Tree}{Tree} и \hyperlink{FAQ.HowToSetName}{назовите} её myTree
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Type.Def}{Type} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Type.Def}{Type} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Type.Def}{Type}, с началом \hyperlink{Core.Any.Def}{Any}, концом
+        \hyperlink{Core.Any.Def}{Any} и \hyperlink{FAQ.HowToSetName}{назовите} её
+        MyDownLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Type.Def}{Type}, с началом \hyperlink{Core.Any.Def}{Any}, концом
+        \hyperlink{Core.Any.Def}{Any} и \hyperlink{FAQ.HowToSetName}{назовите} её
+        MyUpLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
+        \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyNode1
-  \item Создаём связь \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
+        \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyNode2
-  \item Создаём связь \hyperlink{TreeIncludeDown.Def}{TreeIncludeDown} от
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
+        \hyperlink{TreeIncludeDown.Def}{TreeIncludeDown} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyDownLink
-  \item Создаём связь \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
+        \hyperlink{TreeIncludeNode.Def}{TreeIncludeUp} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyUpLink
-  \item Создаём экземпляр MyNode1 с названием myNode1
-  \item Создаём экземпляр MyNode2 с названием myNode2
-  \item Создаём экземпляр MyDownLink от экземпляра MyNode1 до экземпляра
-        MyNode2
-  \item Создаём связь \hyperlink{Space.Def}{Space}
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
+        и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode2
+        и \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        MyDownLink с началом myNode1 и концом myNode2 и \hyperlink{FAQ.HowToSetName}{назовите} её myDownLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyUpLink с началом myNode2 и концом myNode1 и
+        \hyperlink{FAQ.HowToSetName}{назовите} её myUpLink
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
+        \hyperlink{Space.Def}{Space}, что бы пеерстать видеть наши связи и показать
+        работу деревьев, используя Traveller
   \item Открываем контекстное меню экземпляра \hyperlink{Space.Def}{Space} и
         нажимаем кнопку "Space" что бы перейти в это пространство
   \item Открываем контекстное меню, нажимаем кнопку Query, вводим в поле для
-        ввода myNode1, нажимаем на myNode1, нажимаем галочку, что бы увидеть эту связь
+        ввода myNode1, нажимаем на myNode1, нажимаем галочку, что бы увидеть
+        эту связь
   \item Открываем контекстное меню, нажимаем кнопку
-        \hyperlink{Traveller.Def}{Traveller}, нажимаем кнопку Down, нажимаем на кнопку
+        \hyperlink{Traveller.Def}{Traveller}, нажимаем кнопку Down, нажимаем на
+        кнопку
         myTree
   \item Созерцайте путешествие от связи myNode1 вниз по дереву myTree, вы
         должны видеть связи myNode1, myDownLink, myNode2
   \item Открываем меню DeepCase, нажимаем крестик около слова Space, что бы
-        выйти из текущего пространства и вернуться в пространство нашего пользователя
+        выйти из текущего пространства и вернуться в пространство нашего
+        пользователя
   \item Снова создаём новое пространство, заходим в него
   \item Снова с помощью Query запрашиваем связь, но уже myNode2
   \item С помощью \hyperlink{Traveller.Def}{Traveller} запрашиваем связи вверх
@@ -933,7 +1099,6 @@ await deep.delete(
   await deep.id("A", "B", "C");
 \end{lstlisting}
 
-
 \subsection{Таблицы}
 Deep использует различные таблицы, такие как links (для хранения связей) и
 numbers, strings, objects (для хранения значений привязанных к связям).
@@ -959,13 +1124,16 @@ numbers, strings, objects (для хранения значений привяз
 
 \subsubsection{Часто задаваемые вопросы}
 \paragraph{Как дать название связи?}
-\hypertarget{FAQ.HowToSetName}{Что бы дать название связи}, нужно изменить значение \hyperlink{Contain.Def}{Contain} связи, которая указывает на вашу связь. \\
-\textbf{Исключения:} 
+\hypertarget{FAQ.HowToSetName}{Что бы дать название связи}, нужно изменить
+значение \hyperlink{Contain.Def}{Contain} связи, которая указывает на вашу
+связь. \\
+\textbf{Исключения:}
 \begin{itemize}
   \item \hyperlink{Package.Def}{Package}
   \item \hyperlink{Package.Def}{User}
 \end{itemize}
-\paragraph{Как вставить связь без начала и конца?}\hypertarget{FAQ.HowToInsertLinkWithoutFromAndTo}{}
+\paragraph{Как вставить связь без начала и
+  конца?}\hypertarget{FAQ.HowToInsertLinkWithoutFromAndTo}{}
 \subparagraph{В DeepCase}
 При \hyperlink{DeepCase.InsertLink.Def}{вставке связи} нажмите в пустом месте
 \subparagraph{Программно}

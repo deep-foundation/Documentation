@@ -261,27 +261,24 @@
 Пакет это тоже связь, экземпляр \hyperlink{Core.Package}{Package} \\
 Принадлежность связи к пакету определяется с помощью экземпляра \hyperlink{Contain.Def}{Contain}. То есть что бы ваша связь находилась в пакетее - нужно иметь экземпляр \hyperlink{Core.Contain.Def}{Contain}, ведущий от пакета к связи \\
 Если связь пакета А указывает началом/концом/типом на связь пакета Б, то пакет А становится зависимым от пакета Б \\
-\subsubsection{Пример}
-\begin{lstlisting}
-await deep.insert({
-  type_id: await deep.id("@freephoenix888/dependency", "Dependency"),
-  from_id: await deep.id("deep-memo", "Device"),
-  to_id: await deep.id("deep-memo", "Device"),
-  in: {
-    data: [
-      {
-        type_id: await deep.id("@deep-foundation/core", "Contain"),
-        from_id: await deep.id("MyPackageName"),
-        string: {
-          data: {
-            value: `MyDependency`,
-          },
-        },
-      },
-    ],
-  },
-});
-\end{lstlisting}
+\subsubsection{Примеры}
+\subparagraph{Создание пакета}
+\begin{itemize}
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{Core.Package.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage
+\end{itemize}
+\subparagraph{Добавление связи в пакет}
+\begin{itemize}
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{Core.Package.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage. Кстати, теперь ваш пакет зависит от пакета \hyperlink{Core.Def}{@deep-foundation/core}, потому что использует его связь \hyperlink{Core.Type.Def}{Type} как тип для нашей связи
+  \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+\end{itemize}
+\subparagraph{Публикация пакета}
+\begin{itemize}
+  \item Что бы опубликовать пакет нужно \hyperlink{DeepCase.InsertLink.Def}{вставить} связь типа \hyperlink{NpmPackager.Token.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и дать ей значение равное вашему токену из npm, который вы можете получить на \url{https://www.npmjs.com/}
+  \item Нажмите левой кнопкой мыши на MyPackage и увидите клиентский обработчик, показывающий визуализацию для пакета. Введите название и версию пакета и нажмите кнопку Save, а затем Publish
+  \item Теперь нам нужно увидеть связь Publish, которая создалась благодаря нажатию на кнопку Publish. Откройте контекстное меню MyPackage, нажмите Traveller, затем TODO: В разработке % TODO:
+  \item Что бы увидеть результат выполнения обработчика выкладывания пакета - откройте контекстное меню Publish, нажмите Traveller, затем затем Down, затем promiseTree, и вы увидите всё, что ниже по дереву promiseTree, то есть результаты всех асинхронных обработчиков, в данном случае одного
+\end{itemize}
+
 
 % Обработчики
 \subsection{Обработчики}

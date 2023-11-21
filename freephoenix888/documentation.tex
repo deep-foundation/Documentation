@@ -931,13 +931,15 @@ HandleUpdate с началом типом \hyperlink{Core.Type.Description}{Type
 \paragraph{Примеры}
 
 \subparagraph{Вставка связи с типом 1}
+\leavevmode
 \begin{lstlisting}
 await deep.insert({
   type_id: 1,
 });
 \end{lstlisting}
 
-\subparagraph{Вставка связи с типом \hyperlink{Core.Type.Description}{Type}}
+\subparagraph{Вставка связи с типом Type}
+\leavevmode
 \begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -945,6 +947,7 @@ await deep.insert({
 \end{lstlisting}
 
 \subparagraph{Вставка связи с типом Reply из пакета messenger}
+\leavevmode
 \begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("messenger", "Reply"),
@@ -954,6 +957,7 @@ await deep.insert({
 \end{lstlisting}
 
 \subparagraph{Вставка строкового значения для связи 100}
+\leavevmode
 \begin{lstlisting}
 await deep.insert(
   {
@@ -971,13 +975,15 @@ await deep.insert(
 \paragraph{Примеры}
 
 \subparagraph{Получение связи с типом 1}
+\leavevmode
 \begin{lstlisting}
 await deep.select({
   type_id: 1,
 });
 \end{lstlisting}
 
-\subparagraph{Получение связи с типом \hyperlink{Core.Type.Description}{Type}}
+\subparagraph{Получение связи с типом Type}
+\leavevmode
 \begin{lstlisting}
 await deep.select({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -985,6 +991,7 @@ await deep.select({
 \end{lstlisting}
 
 \subparagraph{Получение связи с типом Reply из пакета messenger}
+\leavevmode
 \begin{lstlisting}
 await deep.select({
   type_id: await deep.id("messenger", "Reply"),
@@ -994,6 +1001,7 @@ await deep.select({
 \end{lstlisting}
 
 \subparagraph{Получение строкового значения для связи 100}
+\leavevmode
 \begin{lstlisting}
 await deep.select(
   {
@@ -1013,6 +1021,7 @@ await deep.select(
 \paragraph{Примеры}
 
 \subparagraph{Обновление начала и конца}
+\leavevmode
 \begin{lstlisting}
 await deep.update(
   {
@@ -1026,6 +1035,7 @@ await deep.update(
 \end{lstlisting}
 
 \subparagraph{Обновление строкового значения}
+\leavevmode
 \begin{lstlisting}
 await deep.update(
   {
@@ -1046,6 +1056,7 @@ await deep.update(
 
 Удаление связи с типом 1
 
+\leavevmode
 \begin{lstlisting}
 await deep.delete({
   type_id: 1,
@@ -1054,6 +1065,7 @@ await deep.delete({
 
 Удаление связи с типом \hyperlink{Core.Type.Description}{Type}
 
+\leavevmode
 \begin{lstlisting}
 await deep.delete({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -1061,6 +1073,7 @@ await deep.delete({
 \end{lstlisting}
 
 Удаление связи с определённым типом, началом, концом
+\leavevmode
 \begin{lstlisting}
 await deep.delete({
   type_id: 5,
@@ -1070,6 +1083,7 @@ await deep.delete({
 \end{lstlisting}
 
 Удаление строкового значения для связи 100
+\leavevmode
 \begin{lstlisting}
 await deep.delete(
   {

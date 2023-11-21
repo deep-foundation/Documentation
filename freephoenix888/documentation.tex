@@ -203,12 +203,12 @@
 Если у типа конец это связь \hyperlink{Core.Any.Def}{Any}, то экземпляр может иметь конец в виде любой связи. \\
 
 \subsubsection{Пример}
-\paragraph{Тип и экземпляр без начала и конца}
+\paragraph{Тип без начала и конца}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
 \end{itemize}
-\subparagraph{Тип и экземпляр с определёнными началом и концом}
+\subparagraph{Тип с определёнными началом и концом}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
@@ -220,7 +220,7 @@
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode3} и увидите ошибку, потому что вы выставили такое ограчничение: экземпляры MyLink должен иметь начало в виде экземпляра  MyNode1, а конец в виде экземпляра MyNode2, следовательно вы не можете использовать экземпляр MyNode3 как конец
 \end{itemize}
-\subparagraph{Пример с связью между Any и определённым концом}
+\subparagraph{Тип между Any и определённым концом}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
@@ -231,7 +231,7 @@
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр любого типа, конец - экземпляр MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и увидите ошибку, потому что вы выставили такое ограчничение: экземпляры MyLink могут иметь начало в виде экземпляра любого типа, а конец должен быть в виде экземпляра MyNode1, следовательно вы не можете использовать экземпляр MyNode2 как конец
 \end{itemize}
-\subparagraph{Пример с связью между определённым началом и концом Any}
+\subparagraph{Тип между определённым началом и концом Any}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
@@ -242,7 +242,7 @@
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode2 и концом myNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её myLink и увидите ошибку, потому что вы выставили такое ограчничение: экземпляры MyLink должны иметь начало в виде экземпляра MyNode1, а конец может быть в виде экземпляра любого типа, следовательно вы не можете использовать экземпляр MyNode2 как начало
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyLink \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом myMode1 и концом myNode2} и не увидите ошибку, потому что ограничение типа MyLink удовлетворено: начало - экземпляр MyNode1, конец - экземпляр любого типа
 \end{itemize}
-\subparagraph{Пример с связью между Any и Any}
+\subparagraph{Тип между Any и Any}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2

@@ -85,13 +85,13 @@
                 должен вести от экземпляра связи А к экземпляру связи Б
           \item Если нужно что бы экземпляр связи мог быть связан с любой
                 связью,
-                то нужно использовать встроенный тип \hyperlink{any.Def}{Any}
+                то нужно использовать встроенный тип \hyperlink{Core.Any.Def}{Any}
         \end{itemize}
 
   \item \textbf{Пакеты:}
         \begin{itemize}
           \item Существует встроенный в Deep тип
-                \hyperlink{Contain.Def}{Contain}, обозначающий
+                \hyperlink{Core.Contain.Def}{Contain}, обозначающий
                 принадлежность связей к определенному пакету.
           \item Пакеты не обязательно содержат связи напрямую; они могут
                 указывать на связи из других пакетов. В таком случае пакет
@@ -181,14 +181,14 @@
 \subsubsection{Пример}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её Conversation
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и
         \hyperlink{FAQ.HowToSetName}{назовите} её Message
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} от Message до Conversation и
+        \hyperlink{Core.Type.Def}{Type} от Message до Conversation и
         \hyperlink{FAQ.HowToSetName}{назовите} её Reply
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа Reply от
         Message до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её
@@ -200,10 +200,10 @@
         \hyperlink{Core.Value.Def}{Value} от UrgentMessage до
         \hyperlink{Core.String.Def}{String}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Conversation}
+        \hyperlink{Core.Type.Def}{Conversation}
         \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{UrgentMessage}
+        \hyperlink{Core.Type.Def}{UrgentMessage}
         \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
   \item \hyperlink{DeepCase.UpdateLink.Def}{Обновите} экземпляр связи
         UrgentMessage
@@ -227,7 +227,7 @@
 \paragraph{Тип без начала и конца}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode
         \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
@@ -235,16 +235,16 @@
 \subparagraph{Тип с определёнными началом и концом}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode3
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
           началом MyMode1 и концом MyNode2} и \hyperlink{FAQ.HowToSetName}{назовите} её
         MyLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
@@ -269,13 +269,13 @@
 \subparagraph{Тип между Any и определённым концом}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
           началом Any и концом MyNode1} и \hyperlink{FAQ.HowToSetName}{назовите} её
         MyLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
@@ -304,13 +304,13 @@
 \subparagraph{Тип между определённым началом и концом Any}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
           началом MyNode1 и концом Any} и \hyperlink{FAQ.HowToSetName}{назовите} её
         MyLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
@@ -338,13 +338,13 @@
 \subparagraph{Тип между Any и Any}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с
           началом Any и концом Any} и \hyperlink{FAQ.HowToSetName}{назовите} её MyLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
         \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и
@@ -381,7 +381,7 @@
 обеспечение состоящее из различных файлов. \\
 Пакет это тоже связь, экземпляр \hyperlink{Core.Package}{Package} \\
 Принадлежность связи к пакету определяется с помощью экземпляра
-\hyperlink{Contain.Def}{Contain}. То есть что бы ваша связь находилась в
+\hyperlink{Core.Contain.Def}{Contain}. То есть что бы ваша связь находилась в
 пакетее - нужно иметь экземпляр \hyperlink{Core.Contain.Def}{Contain}, ведущий
 от пакета к связи \\
 Если связь пакета А указывает началом/концом/типом на связь пакета Б, то пакет
@@ -403,7 +403,7 @@
         зависит от пакета \hyperlink{Core.Def}{@deep-foundation/core}, потому что
         использует его связь \hyperlink{Core.Type.Def}{Type} как тип для нашей связи
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+        \hyperlink{Core.Type.Def}{Type} \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
           начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
 \end{itemize}
 \subparagraph{Публикация пакета}
@@ -459,9 +459,9 @@
 транзакция отменяется
 \subparagraph{Примеры}
 
-Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{type.Def}{Type}})
+Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{Core.Type.Def}{Type}})
 
-Создаём \hyperlink{SyncTextFile.Def}{SyncTextFile} содержащий такой код:
+Создаём \hyperlink{Core.SyncTextFile.Def}{SyncTextFile} содержащий такой код:
 
 \begin{lstlisting}
 ({ data: { newLink: emailLink } }) => {
@@ -476,8 +476,8 @@
 \end{lstlisting}
 
 Создаём \texttt{Handler} (от:
-\hyperlink{dockerSupportsJs.Def}{dockerSupportsJs}, до: наш
-\hyperlink{SyncTextFile.Def}{SyncTextFile})
+\hyperlink{Core.dockerSupportsJs.Def}{dockerSupportsJs}, до: наш
+\hyperlink{Core.SyncTextFile.Def}{SyncTextFile})
 
 Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
 \texttt{Handler})
@@ -527,8 +527,8 @@ promiseTree от связи-триггера. В визуальном интер
 \subparagraph{Примеры:}
 
 \begin{itemize}
-  \item Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{type.Def}{Type}})
-  \item Создаём \hyperlink{SyncTextFile.Def}{SyncTextFile} содержащий такой
+  \item Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{Core.Type.Def}{Type}})
+  \item Создаём \hyperlink{Core.SyncTextFile.Def}{SyncTextFile} содержащий такой
         код:
         \begin{lstlisting}
 async ({ data: { newLink: emailLink } }) => {
@@ -542,8 +542,8 @@ async ({ data: { newLink: emailLink } }) => {
 };
 \end{lstlisting}
   \item Создаём \texttt{Handler} (от:
-        \hyperlink{dockerSupportsJs.Def}{dockerSupportsJs} , до: наш
-        \hyperlink{SyncTextFile.Def}{SyncTextFile})
+        \hyperlink{Core.dockerSupportsJs.Def}{dockerSupportsJs} , до: наш
+        \hyperlink{Core.SyncTextFile.Def}{SyncTextFile})
   \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
         \texttt{Handler})
         \begin{verbatim}
@@ -592,36 +592,36 @@ deep-foundation.com/my-path:5000.
 \paragraph{Примеры}
 \subparagraph{Обработчик, возвращающий "ok" в любом случае}
 \begin{itemize}
-  \item Создать \hyperlink{SyncTextFile.Def}{SyncTextFile} с таким кодом:
+  \item Создать \hyperlink{Core.SyncTextFile.Def}{SyncTextFile} с таким кодом:
         \begin{lstlisting}
 (request, response) => {
     response.send("ok");
 }
 \end{lstlisting}
-  \item Создать \hyperlink{Handler.Def}{Handler} от
-        \hyperlink{dockerSupportsJs.Def}{dockerSupportsJs}
-        до нашего \hyperlink{SyncTextFile.Def}{SyncTextFile}
-  \item Создать \hyperlink{Route.Def}{Route}
-  \item Создать \hyperlink{HandleRoute.Def}{HandleRoute} от нашего
-        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Handler.Def}{Handler}
-  \item Создать \hyperlink{Router.Def}{Router}
-  \item Создать \hyperlink{RouterStringUse.Def}{RouterStringUse} от нашего
-        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Router.Def}{Router},
+  \item Создать \hyperlink{Core.Handler.Def}{Handler} от
+        \hyperlink{Core.dockerSupportsJs.Def}{dockerSupportsJs}
+        до нашего \hyperlink{Core.SyncTextFile.Def}{SyncTextFile}
+  \item Создать \hyperlink{Core.Route.Def}{Route}
+  \item Создать \hyperlink{Core.HandleRoute.Def}{HandleRoute} от нашего
+        \hyperlink{Core.Route.Def}{Route} до нашего \hyperlink{Core.Handler.Def}{Handler}
+  \item Создать \hyperlink{Core.Router.Def}{Router}
+  \item Создать \hyperlink{Core.RouterStringUse.Def}{RouterStringUse} от нашего
+        \hyperlink{Core.Route.Def}{Route} до нашего \hyperlink{Core.Router.Def}{Router},
         с
         значением
         веб-маршрута, который должен обрабатываться, например /my-path
-  \item Создать \hyperlink{Port.Def}{Port} с значением порта, который должен
+  \item Создать \hyperlink{Core.Port.Def}{Port} с значением порта, который должен
         обрабатываться, например
         5000
-  \item Создать \hyperlink{RouterListening.Def}{RouterListening} от нашего
-        \hyperlink{Router.Def}{Router} до нашего \hyperlink{Port.Def}{Port}
+  \item Создать \hyperlink{Core.RouterListening.Def}{RouterListening} от нашего
+        \hyperlink{Core.Router.Def}{Router} до нашего \hyperlink{Core.Port.Def}{Port}
 \end{itemize}
 
 \subparagraph{Обработчик, обрабатывающий входящий запрос}
 В данном примере обработчик будет проверять поле isOk в входящем запрос, если
 он true, то мы ответим строкой "ok", иначе "not ok"
 \begin{itemize}
-  \item Создать \hyperlink{SyncTextFile.Def}{SyncTextFile} с таким кодом:
+  \item Создать \hyperlink{Core.SyncTextFile.Def}{SyncTextFile} с таким кодом:
         \begin{lstlisting}
 async (
   request,
@@ -634,23 +634,23 @@ async (
   }
 }
 \end{lstlisting}
-  \item Создать \hyperlink{Handler.Def}{Handler} от
-        \hyperlink{dockerSupportsJs.Def}{dockerSupportsJs}
-        до нашего \hyperlink{SyncTextFile.Def}{SyncTextFile}
-  \item Создать \hyperlink{Route.Def}{Route}
-  \item Создать \hyperlink{HandleRoute.Def}{HandleRoute} от нашего
-        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Handler.Def}{Handler}
-  \item Создать \hyperlink{Router.Def}{Router}
-  \item Создать \hyperlink{RouterStringUse.Def}{RouterStringUse} от нашего
-        \hyperlink{Route.Def}{Route} до нашего \hyperlink{Router.Def}{Router},
+  \item Создать \hyperlink{Core.Handler.Def}{Handler} от
+        \hyperlink{Core.dockerSupportsJs.Def}{dockerSupportsJs}
+        до нашего \hyperlink{Core.SyncTextFile.Def}{SyncTextFile}
+  \item Создать \hyperlink{Core.Route.Def}{Route}
+  \item Создать \hyperlink{Core.HandleRoute.Def}{HandleRoute} от нашего
+        \hyperlink{Core.Route.Def}{Route} до нашего \hyperlink{Core.Handler.Def}{Handler}
+  \item Создать \hyperlink{Core.Router.Def}{Router}
+  \item Создать \hyperlink{Core.RouterStringUse.Def}{RouterStringUse} от нашего
+        \hyperlink{Core.Route.Def}{Route} до нашего \hyperlink{Core.Router.Def}{Router},
         с
         значением
         веб-маршрута, который должен обрабатываться, например /my-path
-  \item Создать \hyperlink{Port.Def}{Port} с значением порта, который должен
+  \item Создать \hyperlink{Core.Port.Def}{Port} с значением порта, который должен
         обрабатываться, например
         5000
-  \item Создать \hyperlink{RouterListening.Def}{RouterListening} от нашего
-        \hyperlink{Router.Def}{Router} до нашего \hyperlink{Port.Def}{Port}
+  \item Создать \hyperlink{Core.RouterListening.Def}{RouterListening} от нашего
+        \hyperlink{Core.Router.Def}{Router} до нашего \hyperlink{Core.Port.Def}{Port}
 \end{itemize}
 
 \paragraph{Справочник}
@@ -706,22 +706,22 @@ DeepCase\hypertarget{DeepCase.Def}{} является графическим в�
 месте и в открытом контекстном меню нажать на "Insert". После этого откроется
 меню вставки связи, в котором есть поле для ввода что бы фильтровать связи по
 названию, а так же сами связи ниже поля для ввода. Введите название нужной
-связи, например \hyperlink{type.Def}{Type} и ниже найдите связь с таким
+связи, например \hyperlink{Core.Type.Def}{Type} и ниже найдите связь с таким
 названием. Вы можете
-заметить, что там есть как минимум два \hyperlink{type.Def}{Type}, один со
+заметить, что там есть как минимум два \hyperlink{Core.Type.Def}{Type}, один со
 значком звёздочки, а
 другой со значком папки. Связь с значком папки это
-\hyperlink{Contain.Def}{Contain}, следовательно нажав
+\hyperlink{Core.Contain.Def}{Contain}, следовательно нажав
 на стрелку влево около этой связи, мы сможем увидеть откуда ведёт
-\hyperlink{Contain.Def}{Contain}
+\hyperlink{Core.Contain.Def}{Contain}
 (после нажатия активная связь появляется над полем для ввода), а нажав на
 стрелку вправо сможем увидеть на какую связь указывает
-\hyperlink{Contain.Def}{Contain}, следовательно
-\hyperlink{Contain.Def}{Contain} будет указывать на ту самую связь со
+\hyperlink{Core.Contain.Def}{Contain}, следовательно
+\hyperlink{Core.Contain.Def}{Contain} будет указывать на ту самую связь со
 звёздочкой, то есть вы можете
-выбрать \hyperlink{type.Def}{Type} либо нажав на стрелку вправо у его
-\hyperlink{Contain.Def}{Contain}'a, либо нажав на сам
-\hyperlink{type.Def}{Type} (на название). Удостоверьтесь, что над полем для
+выбрать \hyperlink{Core.Type.Def}{Type} либо нажав на стрелку вправо у его
+\hyperlink{Core.Contain.Def}{Contain}'a, либо нажав на сам
+\hyperlink{Core.Type.Def}{Type} (на название). Удостоверьтесь, что над полем для
 ввода отображается нужная
 связь и после этого нажмите на галочку справа внизу от меню вставки, что бы
 активировать вставку этой связи. После этого вы увидите уведомление слева внизу
@@ -772,18 +772,18 @@ DeepCase\hypertarget{DeepCase.Def}{} является графическим в�
 содержит самые важные типы для работы с Deep
 \subsubsection{Связи}
 \paragraph*{Type}
-Тип Type\hypertarget{type.Def}{} используется для создания новых типов
+Тип Type\hypertarget{Core.Type.Def}{} используется для создания новых типов
 \paragraph*{Contain}
-Тип Contain\hypertarget{Contain.Def}{} используется для обозначения
+Тип Contain\hypertarget{Core.Contain.Def}{} используется для обозначения
 принадлежности, а так же для присваивания имени связи. Например пакет, что бы
-содержать в себе другие связи - имеет \hyperlink{Contain.Def}{Contain} от себя
+содержать в себе другие связи - имеет \hyperlink{Core.Contain.Def}{Contain} от себя
 до другой связи. Если вы хотите дать имя связи - обновите значение экземпляра
-\hyperlink{Contain.Def}{Contain}
+\hyperlink{Core.Contain.Def}{Contain}
 \paragraph*{SyncTextFile}
-Тип SyncTextFile\hypertarget{SyncTextFile.Def}{} используется для хранения
+Тип SyncTextFile\hypertarget{Core.SyncTextFile.Def}{} используется для хранения
 любого строкового значения
 \paragraph*{Any}
-Тип Any\hypertarget{any.Def}{} может использоваться для ограничений
+Тип Any\hypertarget{Core.Any.Def}{} может использоваться для ограничений
 \subparagraph*{Начало/конец типа}
 Например есть при создании типа А вы можете указать, что его началом
 обязательно должен быть Б, а концом может быть любая связь, для этого концом у
@@ -792,64 +792,64 @@ DeepCase\hypertarget{DeepCase.Def}{} является графическим в�
 Any может использоваться как обрабатываемый тип, в таком случае обработчик
 будет обрабатывать экземпляры всех типов
 \paragraph*{Handler}
-Тип Handler\hypertarget{handler.Def}{} используется для создания обработчика.
+Тип Handler\hypertarget{Core.Handler.Def}{} используется для создания обработчика.
 Его началом является экземпляр \hyperlink{supports.Def}{Supports}, а концом
 любая связь, содержащая код в строковом значении
 \paragraph*{Supports}
-Тип Supports\hypertarget{handler.Def}{} используется для создания среды
+Тип Supports\hypertarget{Core.Handler.Def}{} используется для создания среды
 выполнения обработчика. Примером среды выполнения обработчика является
-\hyperlink{dockerSupportsJs.Def}{dockerSupportsJs}
+\hyperlink{Core.dockerSupportsJs.Def}{dockerSupportsJs}
 \paragraph*{dockerSupportsJs}
-Связь dockerSupportsJs\hypertarget{dockerSupportsJs.Def}{} используется для
+Связь dockerSupportsJs\hypertarget{Core.dockerSupportsJs.Def}{} используется для
 поддержки JavaScript в Docker. Что бы использовать эту среду для обработчика,
-нужно сделать эту связь началом связи \hyperlink{handler.Def}{Handler}
+нужно сделать эту связь началом связи \hyperlink{Core.Handler.Def}{Handler}
 \paragraph*{HandleInsert}
-Связь HandleInsert\hypertarget{HandleInsert.Def}{} используется для обработки
+Связь HandleInsert\hypertarget{Core.HandleInsert.Def}{} используется для обработки
 вставки экземпляров определённого типа. Например, что бы обрабатывать вставку
-экземпляров типа \hyperlink{type.Def}{Type}, нужно создать HandleInsert с
-началом типом \hyperlink{type.Def}{Type} и концом обработчиком, то есть
-экземпляром \hyperlink{handler.Def}{Handler}
+экземпляров типа \hyperlink{Core.Type.Def}{Type}, нужно создать HandleInsert с
+началом типом \hyperlink{Core.Type.Def}{Type} и концом обработчиком, то есть
+экземпляром \hyperlink{Core.Handler.Def}{Handler}
 \paragraph*{HandleUpdate}
-Связь HandleUpdate\hypertarget{HandleUpdate.Def}{} используется для обработки
+Связь HandleUpdate\hypertarget{Core.HandleUpdate.Def}{} используется для обработки
 обновлений экземпляров определённого типа. Например, что бы обрабатывать
-обновления экземпляров типа \hyperlink{type.Def}{Type}, нужно создать
-HandleUpdate с началом типом \hyperlink{type.Def}{Type} и концом обработчиком,
-то есть экземпляром \hyperlink{handler.Def}{Handler}
+обновления экземпляров типа \hyperlink{Core.Type.Def}{Type}, нужно создать
+HandleUpdate с началом типом \hyperlink{Core.Type.Def}{Type} и концом обработчиком,
+то есть экземпляром \hyperlink{Core.Handler.Def}{Handler}
 \paragraph*{HandleUpdate}
-Связь HandleDelete\hypertarget{HandleDelete.Def}{} используется для обработки
+Связь HandleDelete\hypertarget{Core.HandleDelete.Def}{} используется для обработки
 удалений экземпляров определённого типа. Например, что бы обрабатывать удаления
-экземпляров типа \hyperlink{type.Def}{Type}, нужно создать HandleDelete с
-началом типом \hyperlink{type.Def}{Type} и концом обработчиком, то есть
-экземпляром \hyperlink{handler.Def}{Handler}
+экземпляров типа \hyperlink{Core.Type.Def}{Type}, нужно создать HandleDelete с
+началом типом \hyperlink{Core.Type.Def}{Type} и концом обработчиком, то есть
+экземпляром \hyperlink{Core.Handler.Def}{Handler}
 \paragraph*{Tree}
-Тип Tree\hypertarget{Tree.Def}{} используется для создания дерева
+Тип Tree\hypertarget{Core.Tree.Def}{} используется для создания дерева
 \paragraph*{TreeIncludeDown}
-Тип TreeIncludeDown\hypertarget{TreeIncludeDown.Def}{} используется для
+Тип TreeIncludeDown\hypertarget{Core.TreeIncludeDown.Def}{} используется для
 включения в дерево связи, по направлению вниз
 \paragraph*{TreeIncludeUp}
-Тип TreeIncludeUp\hypertarget{TreeIncludeUp.Def}{} используется для включения в
+Тип TreeIncludeUp\hypertarget{Core.TreeIncludeUp.Def}{} используется для включения в
 дерево связи, по направлению вверх
 \paragraph*{TreeIncludeNode}
-Тип TreeIncludeNode\hypertarget{TreeIncludeNode.Def}{} используется для
+Тип TreeIncludeNode\hypertarget{Core.TreeIncludeNode.Def}{} используется для
 включения в дерево связи, у которой нет начала и конца
 \paragraph*{Route}
-Тип Route\hypertarget{Route.Def}{} используется для создания веб-маршрута
+Тип Route\hypertarget{Core.Route.Def}{} используется для создания веб-маршрута
 \paragraph*{HandleRoute}
-Связь HandleRoute\hypertarget{HandleRoute.Def}{} используется для обработки
+Связь HandleRoute\hypertarget{Core.HandleRoute.Def}{} используется для обработки
 веб-маршрута
 
 \paragraph*{Router}
-Тип Router\hypertarget{Router.Def}{} используется для создания роутера
+Тип Router\hypertarget{Core.Router.Def}{} используется для создания роутера
 \paragraph*{RouterStringUse}
-Связь RouterStringUse\hypertarget{RouterStringUse.Def}{} используется для
+Связь RouterStringUse\hypertarget{Core.RouterStringUse.Def}{} используется для
 указания веб-маршрута, который должен обрабатываться
 \paragraph*{Port}
-Тип Port\hypertarget{Port.Def}{} используется для создания порта
+Тип Port\hypertarget{Core.Port.Def}{} используется для создания порта
 \paragraph*{RouterListening}
-Связь RouterListening\hypertarget{RouterListening.Def}{} используется для
+Связь RouterListening\hypertarget{Core.RouterListening.Def}{} используется для
 указания порта, который должен обрабатываться
 \paragraph*{Space}
-Тип Space\hypertarget{Space.Def}{} используется для создания пространства
+Тип Space\hypertarget{Core.Space.Def}{} используется для создания пространства
 
 \subsection{Материализованный путь, деревья}
 \subsubsection{Описание}
@@ -876,16 +876,16 @@ HandleUpdate с началом типом \hyperlink{type.Def}{Type} и конц
         \hyperlink{Core.Any.Def}{Any} и \hyperlink{FAQ.HowToSetName}{назовите} её
         MyUpLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
-        \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
+        \hyperlink{Core.TreeIncludeNode.Def}{TreeIncludeNode} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyNode1
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
-        \hyperlink{TreeIncludeNode.Def}{TreeIncludeNode} от
+        \hyperlink{Core.TreeIncludeNode.Def}{TreeIncludeNode} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyNode2
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
-        \hyperlink{TreeIncludeDown.Def}{TreeIncludeDown} от
+        \hyperlink{Core.TreeIncludeDown.Def}{TreeIncludeDown} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyDownLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь
-        \hyperlink{TreeIncludeNode.Def}{TreeIncludeUp} от
+        \hyperlink{Core.TreeIncludeNode.Def}{TreeIncludeUp} от
         экземпляра \hyperlink{Core.Tree.Def}{Tree} до MyUpLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyNode1
         и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
@@ -896,9 +896,9 @@ HandleUpdate с началом типом \hyperlink{type.Def}{Type} и конц
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа MyUpLink с началом myNode2 и концом myNode1 и
         \hyperlink{FAQ.HowToSetName}{назовите} её myUpLink
   \item \hyperlink{DeepCase.InsertLink.Def}{Вставьте} связь типа
-        \hyperlink{Space.Def}{Space}, что бы пеерстать видеть наши связи и показать
+        \hyperlink{Core.Space.Def}{Space}, что бы пеерстать видеть наши связи и показать
         работу деревьев, используя Traveller
-  \item Открываем контекстное меню экземпляра \hyperlink{Space.Def}{Space} и
+  \item Открываем контекстное меню экземпляра \hyperlink{Core.Space.Def}{Space} и
         нажимаем кнопку "Space" что бы перейти в это пространство
   \item Открываем контекстное меню, нажимаем кнопку Query, вводим в поле для
         ввода myNode1, нажимаем на myNode1, нажимаем галочку, что бы увидеть
@@ -936,7 +936,7 @@ await deep.insert({
 });
 \end{lstlisting}
 
-\subparagraph{Вставка связи с типом \hyperlink{type.Def}{Type}}
+\subparagraph{Вставка связи с типом \hyperlink{Core.Type.Def}{Type}}
 \begin{lstlisting}
 await deep.insert({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -976,7 +976,7 @@ await deep.select({
 });
 \end{lstlisting}
 
-\subparagraph{Получение связи с типом \hyperlink{type.Def}{Type}}
+\subparagraph{Получение связи с типом \hyperlink{Core.Type.Def}{Type}}
 \begin{lstlisting}
 await deep.select({
   type_id: await deep.id("@deep-foundation/core", "Type"),
@@ -1051,7 +1051,7 @@ await deep.delete({
 });
 \end{lstlisting}
 
-Удаление связи с типом \hyperlink{type.Def}{Type}
+Удаление связи с типом \hyperlink{Core.Type.Def}{Type}
 
 \begin{lstlisting}
 await deep.delete({
@@ -1125,12 +1125,12 @@ numbers, strings, objects (для хранения значений привяз
 \subsubsection{Часто задаваемые вопросы}
 \paragraph{Как дать название связи?}
 \hypertarget{FAQ.HowToSetName}{Что бы дать название связи}, нужно изменить
-значение \hyperlink{Contain.Def}{Contain} связи, которая указывает на вашу
+значение \hyperlink{Core.Contain.Def}{Contain} связи, которая указывает на вашу
 связь. \\
 \textbf{Исключения:}
 \begin{itemize}
-  \item \hyperlink{Package.Def}{Package}
-  \item \hyperlink{Package.Def}{User}
+  \item \hyperlink{Core.Package.Def}{Package}
+  \item \hyperlink{Core.Package.Def}{User}
 \end{itemize}
 \paragraph{Как вставить связь без начала и
   конца?}\hypertarget{FAQ.HowToInsertLinkWithoutFromAndTo}{}

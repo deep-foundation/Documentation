@@ -458,42 +458,35 @@
 данных и в случае ошибки
 транзакция отменяется
 \subparagraph{Примеры}
+\begin{itemize}
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Type.Description}{Type} и \hyperlink{FAQ.HowToSetName}{назовите} её Email
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с следующим значением:
+      \begin{lstlisting}
+            ({ data: { newLink: emailLink } }) => {
+              const email = emailLink.value?.value;
+              if (!email) {
+                throw new Error(`Link ${emailLink.id} has not value`);
+              }
+              if (!email.includes("@")) {
+                throw new Error(`Email ${email} does not include @`);
+              }
+            };
+            \end{lstlisting}
+            и \hyperlink{FAQ.HowToSetName}{назовите} её myHandlerCode
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} с началом \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs} и концом myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа Email и \hyperlink{FAQ.HowToSetName}{назовите} её email
+      \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test"
+      \item Созерцайте ошибку, говорящую о том, что Email не содержит @
+      \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test@deep"
+      \item Созерцайте отсутствие ошибки
+\end{itemize}
 
-Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{Core.Type.Description}{Type}})
 
-Создаём \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} содержащий такой код:
 
-\begin{lstlisting}
-({ data: { newLink: emailLink } }) => {
-  const email = emailLink.value?.value;
-  if (!email) {
-    throw new Error(`Link ${emailLink.id} has not value`);
-  }
-  if (!email.includes("@")) {
-    throw new Error(`Email ${email} does not include @`);
-  }
-};
-\end{lstlisting}
 
-Создаём \texttt{Handler} (от:
-\hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}, до: наш
-\hyperlink{Core.SyncTextFile.Description}{SyncTextFile})
 
-Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
-\texttt{Handler})
 
-Примечание: \texttt{HandleUpdate} имеет начало в виде ТИПА \texttt{Email}, а
-не конкретного \texttt{Email} (экземпляра), то есть "Тип \texttt{Email}
-обрабатывается обработчиком"
 
-Создаём связь \texttt{Email}
-
-Обновляем связь \texttt{Email} (присваиваем ей значение)
-
-В результате значение связи Email либо обновится, либо приведёт к ошибке.
-Если операция проводилась в \hyperlink{DeepCase.Description}{DeepCase} - мы увидим
-ошибку на экране, если
-операция проводилась программно - ошибка будет выброшена
 
 \paragraph{Асинхронные обработчики}
 \subparagraph{Описание}
@@ -519,7 +512,7 @@
 Результат выполнения асинхронного обработчика находится ниже по дереву
 promiseTree от связи-триггера. В визуальном интерфейсе
 \hyperlink{DeepCase.Description}{DeepCase} можно увидеть
-резузльтат используя контекстное меню->traveler->down->promiseTree
+результат используя контекстное меню->traveler->down->promiseTree
 
 Асинхронные обработчики могут запускаться в разных средах. Одна из популярных -
 докер среда, которая использует определенный инструмент, например - node для

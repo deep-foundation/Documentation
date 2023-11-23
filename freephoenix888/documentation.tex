@@ -473,7 +473,7 @@
             };
             \end{lstlisting}
             и \hyperlink{FAQ.HowToSetName}{назовите} её myHandlerCode
-      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} с началом \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs} и концом myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} с началом \hyperlink{Core.plv8SupportsJs.Description}{dockerSupportsJs} и концом myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа Email и \hyperlink{FAQ.HowToSetName}{назовите} её email
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test"
       \item Созерцайте ошибку, говорящую о том, что Email не содержит @
@@ -518,42 +518,44 @@ promiseTree от связи-триггера. В визуальном интер
 докер среда, которая использует определенный инструмент, например - node для
 запуска JavaScript кода.
 \subparagraph{Примеры:}
-
 \begin{itemize}
-  \item Создаём связь \texttt{Email} (тип: \texttt{\hyperlink{Core.Type.Description}{Type}})
-  \item Создаём \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} содержащий такой
-        код:
-        \begin{lstlisting}
-async ({ data: { newLink: emailLink } }) => {
-  const email = emailLink.value?.value;
-  if (!email) {
-    throw new Error(`Link ${emailLink.id} has not value`);
-  }
-  if (!email.includes("@")) {
-    throw new Error(`Email ${email} does not include @`);
-  }
-};
-\end{lstlisting}
-  \item Создаём \texttt{Handler} (от:
-        \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs} , до: наш
-        \hyperlink{Core.SyncTextFile.Description}{SyncTextFile})
-  \item Создаём \texttt{HandleUpdate} (от: тип \texttt{Email}, до: наш
-        \texttt{Handler})
-        \begin{verbatim}
-    Примечание: HandleUpdate имеет начало в виде ТИПА Email,
-    а не конкретного Email (экземпляра), то есть "Тип Email обрабатывается обработчиком"
-    \end{verbatim}
-  \item Создаём связь \texttt{Email}
-  \item Обновляем связь \texttt{Email} (присваиваем ей значение)
-  \item Видим результат асинхронного обработчика в виде связей:
-        \begin{itemize}
-          \item \begin{handler_success_result_info}
-                \end{handler_success_result_info}\\
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Type.Description}{Type} и \hyperlink{FAQ.HowToSetName}{назовите} её Email
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с следующим значением:
+      \begin{lstlisting}
+            async ({ data: { newLink: emailLink } }) => {
+                  const email = emailLink.value?.value;
+                  if (!email) {
+                    throw new Error(`Link ${emailLink.id} has not value`);
+                  }
+                  if (!email.includes("@")) {
+                    throw new Error(`Email ${email} does not include @`);
+                  }
+                };
+            \end{lstlisting}
+            и \hyperlink{FAQ.HowToSetName}{назовите} её myHandlerCode
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} с началом \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs} и концом myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа Email и \hyperlink{FAQ.HowToSetName}{назовите} её email
+      \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test"
+      \item TODO: % TODO:
+      \item Видим результат асинхронного обработчика в виде связей:
+      \begin{itemize}
+        \item \begin{handler_success_result_info}
+              \end{handler_success_result_info}\\
 
-          \item \begin{handler_fail_result_info}
-                \end{handler_fail_result_info}\\
-        \end{itemize}
+        \item \begin{handler_fail_result_info}
+              \end{handler_fail_result_info}\\
+      \end{itemize}
+      \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test@deep"
+      \item Видим результат асинхронного обработчика в виде связей:
+      \begin{itemize}
+        \item \begin{handler_success_result_info}
+              \end{handler_success_result_info}\\
+
+        \item \begin{handler_fail_result_info}
+              \end{handler_fail_result_info}\\
+      \end{itemize}
 \end{itemize}
+
 
 \paragraph{Справочник}
 \subparagraph{Параметры обработчика}

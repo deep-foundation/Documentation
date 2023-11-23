@@ -57,6 +57,13 @@
 
 \newpage % новая страница
 
+\newcommand{\HowToSeeAsyncHandlerResult}{
+    Что бы увидеть результат выполнения обработчика -
+    откройте контекстное меню связи, нажмите Traveller, затем затем Down, затем
+    promiseTree, и вы увидите всё, что ниже по дереву promiseTree, то есть
+    результаты всех асинхронных обработчиков, в данном случае одного
+}
+
 \section{Вступление}
 \subsection{Аннотация}
 
@@ -420,11 +427,9 @@
   \item Теперь нам нужно увидеть связь Publish, которая создалась благодаря
         нажатию на кнопку Publish. Откройте контекстное меню MyPackage, нажмите
         Traveller, затем TODO: В разработке % TODO:
-  \item Что бы увидеть результат выполнения обработчика выкладывания пакета -
-        откройте контекстное меню Publish, нажмите Traveller, затем затем Down, затем
-        promiseTree, и вы увидите всё, что ниже по дереву promiseTree, то есть
-        результаты всех асинхронных обработчиков, в данном случае одного
+  \item \HowToSeeAsyncHandlerResult
 \end{itemize}
+
 
 % Обработчики
 \subsection{Обработчики}
@@ -536,7 +541,7 @@ promiseTree от связи-триггера. В визуальном интер
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} с началом \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs} и концом myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа Email и \hyperlink{FAQ.HowToSetName}{назовите} её email
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test"
-      \item TODO: % TODO:
+      \item \HowToSeeAsyncHandlerResult
       \item Видим результат асинхронного обработчика в виде связей:
       \begin{itemize}
         \item \begin{handler_success_result_info}
@@ -546,6 +551,7 @@ promiseTree от связи-триггера. В визуальном интер
               \end{handler_fail_result_info}\\
       \end{itemize}
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test@deep"
+      \item \HowToSeeAsyncHandlerResult
       \item Видим результат асинхронного обработчика в виде связей:
       \begin{itemize}
         \item \begin{handler_success_result_info}
@@ -1168,5 +1174,4 @@ await deep.insert({
     \hline
   \end{tabular}
 \end{table}
-
 \end{document}

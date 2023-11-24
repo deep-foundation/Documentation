@@ -662,41 +662,6 @@ Docker Container под названием JS Docker Isolation Container обр�
   \item Перейдите по адресу deep-foundation.com:5000/healtz (вместо deep-foundation.com используйте свой адрес, на котором находится deep) и увидите ответ "ok" % TODO: Точно ок?
 \end{itemize}
 
-\subparagraph{Обработчик, обрабатывающий входящий запрос}
-В данном примере обработчик будет проверять поле isOk в входящем запрос, если
-он true, то мы ответим строкой "ok", иначе "not ok"
-\begin{itemize}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
-        \begin{lstlisting}
-async (
-  request,
-  response,
-) => {
-  if(request.isOk) {
-    response.send("ok") 
-  } else {
-    response.send("not ok")
-  }
-}
-\end{lstlisting}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} от
-        \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
-        до нашего \hyperlink{Core.SyncTextFile.Description}{SyncTextFile}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Route.Description}{Route}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandleRoute.Description}{HandleRoute} от нашего
-        \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Handler.Description}{Handler}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Router.Description}{Router}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterStringUse.Description}{RouterStringUse} от нашего
-        \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Router.Description}{Router},
-        с
-        значением
-        веб-маршрута, который должен обрабатываться, например /my-path
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Port.Description}{Port} с значением порта, который должен
-        обрабатываться, например
-        5000
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterListening.Description}{RouterListening} от нашего
-        \hyperlink{Core.Router.Description}{Router} до нашего \hyperlink{Core.Port.Description}{Port}
-\end{itemize}
 
 \paragraph{Параметры обработчика}
 

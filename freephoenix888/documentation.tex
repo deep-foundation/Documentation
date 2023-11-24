@@ -1517,6 +1517,18 @@ await deep.insert({
   type_id: await deep.id("@deep-foundation/core", "Type"), // from_id и to_id не указаны
 });
 \end{verbatim}
+\paragraph{Как вставить связь с началом и
+  концом?}\hypertarget{FAQ.HowToInsertLinkWithFromAndTo}{}
+\subparagraph{В DeepCase}
+При \hyperlink{DeepCase.InsertLink.Description}{вставке связи} нажмите на начале, и не отпуская протяните линию до конца
+\subparagraph{Программно}
+\begin{verbatim}
+await deep.insert({
+  type_id: await deep.id("@deep-foundation/core", "Type"), 
+  from_id: await deep.id("@deep-foundation/core", "Type"),
+  to_id: await deep.id("@deep-foundation/core", "Type"),
+});
+\end{verbatim}
 
 \section{Часть регистрации изменений}
 

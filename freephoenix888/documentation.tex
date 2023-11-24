@@ -686,7 +686,7 @@ TODO: В разработке
             \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
             до syncTextFile и \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
             \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Schedule.Description}{Schedule} и \hyperlink{FAQ.HowToSetName}{назовите} её mySchedule
-            \item Присвойте связи mySchedule значение \hyperlink{Handler.Schedule.CronExpression.Description}{* * * * *, являющееся cron-выражением}
+            \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи mySchedule на \hyperlink{Handler.Schedule.CronExpression.Description}{* * * * *, являющееся cron-выражением}
             В нашем случае мы используем * * * * *, что означает, что мы хотим запускать обработчик каждую минуту каждого часа каждого дня каждого месяца каждого дня недели
             \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandleSchedule.Description}{Schedule} с началом mySchedule и концом myHandler  и \hyperlink{FAQ.HowToSetName}{назовите} её myHandleSchedule
             \item Теперь каждую минуту у вас будет создаваться связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с текстом "Hi!", содержащаяся в пользователе admin

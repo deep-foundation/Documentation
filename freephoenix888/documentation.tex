@@ -649,7 +649,48 @@ async (
 TODO: В разработке
 \subsubsection*{Серверные обработчики по расписанию}
 % TODO
+Серверные обработчики позволяют выполнять определенные действия по расписанию.
+\hypertarget{Handlers.Schedule.CronExpression.Description}{anchor text}Расписание выставляется с помощью cron-выражения вида * * * * *. Это числа либо * (звёздочка), которая означает любое число. Порядок:
+\begin{itemize}
+      \item Минута
+      \item Час
+      \item День месяца
+      \item Месяц
+      \item День недели
+\end{itemize}
+Например * * * * * означает, что обработчик будет запускаться каждую минуту каждого часа каждого дня каждого месяца каждого дня недели, а
+* * 1 * * означает, что обработчик будет запускаться каждую минуту каждого часа первого числа каждого месяца каждого дня недели
 TODO: В разработке
+\begin{itemize}
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким значением:
+            \begin{lstlisting}
+    (deep) => {
+        await deep.insert({
+            type_id: await deep.id("@deep-foundation/core", "SyncTextFile"),
+            string: {
+                  data: {
+                        value: "Hi!"
+                  }
+            }
+            in: {
+                  data: {
+                        type_id: await deep.id("@deep-foundation/core", "Contain"),
+                        from_id: await deep.id("deep", "admin"),
+                  }
+            }
+        })
+    }
+    \end{lstlisting}
+    и \hyperlink{FAQ.HowToSetName}{назовите} её syncTextFile
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} от
+            \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
+            до syncTextFile и \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Schedule.Description}{Schedule} и \hyperlink{FAQ.HowToSetName}{назовите} её mySchedule
+            \item Присвойте связи mySchedule значение \hyperlink{Handler.Schedule.CronExpression.Description}{* * * * *, являющееся cron-выражением}
+            В нашем случае мы используем * * * * *, что означает, что мы хотим запускать обработчик каждую минуту каждого часа каждого дня каждого месяца каждого дня недели
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandleSchedule.Description}{Schedule} с началом mySchedule и концом myHandler  и \hyperlink{FAQ.HowToSetName}{назовите} её myHandleSchedule
+            \item Теперь каждую минуту у вас будет создаваться связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с текстом "Hi!", содержащаяся в пользователе admin
+    \end{itemize}
 \subsection{DeepCase}
 \subsubsection{Описание}
 DeepCase\hypertarget{DeepCase.Description}{} является графическим визуальным

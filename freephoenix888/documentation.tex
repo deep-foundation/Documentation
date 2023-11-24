@@ -57,13 +57,6 @@
 
 \newpage % новая страница
 
-\newcommand{\HowToSeeAsyncHandlerResult}{
-    Что бы увидеть результат выполнения обработчика -
-    откройте контекстное меню связи, нажмите Traveller, затем затем Down, затем
-    promiseTree, и вы увидите всё, что ниже по дереву promiseTree, то есть
-    результаты всех асинхронных обработчиков, в данном случае одного
-}
-
 \section{Вступление}
 \subsection{Аннотация}
 
@@ -426,8 +419,8 @@
         пакета и нажмите кнопку Save, а затем Publish
   \item Теперь нам нужно увидеть связь Publish, которая создалась благодаря
         нажатию на кнопку Publish. Откройте контекстное меню MyPackage, нажмите
-        Traveller, затем TODO: В разработке % TODO:
-  \item \HowToSeeAsyncHandlerResult
+        Traveller->Out->Publish
+  \item \hyperlink{Handlers.Async.HowToGetResult}{Просмотрите результат асинхронного хендлера для связи Publish}
 \end{itemize}
 
 
@@ -497,24 +490,10 @@
 \subparagraph{Описание}
 Асинхронные серверные обработчики выполняются после транзакции, в результате
 приводя к появлению следующих связей: \\
-\newenvironment{handler_success_result_info}
-{%
-  \noindent При успешном выполнении: Связь\textendash триггер \textendash
-  Then\textendash > Promise \textendash Resolved\textendash > \\
-  PromiseResult {(с object value)}
-}
-{}
-\newenvironment{handler_fail_result_info}
-{%
-  При ошибке: Связь\textendash триггер \textendash Then\textendash > Promise
-  \textendash Rejected\textendash > PromiseResult {(с object value)}
-}
-{}
-\begin{handler_success_result_info}
-\end{handler_success_result_info}\\
-\begin{handler_fail_result_info}
-\end{handler_fail_result_info}\\
-Результат выполнения асинхронного обработчика находится ниже по дереву
+\hypertarget{Handlers.Async.Result}{}Связь-триггер --Then-> Promise --Resolved/Rejected-> PromiseResult
+Обратите внимание на Resolved/Rejected. В случае успешного выполнения используется Resolved, иначе Rejected
+
+\hypertarget{Handlers.Async.HowToGetResult}{}Результат выполнения асинхронного обработчика находится ниже по дереву
 promiseTree от связи-триггера. В визуальном интерфейсе
 \hyperlink{DeepCase.Description}{DeepCase} можно увидеть
 результат используя контекстное меню->traveler->down->promiseTree
@@ -541,25 +520,11 @@ promiseTree от связи-триггера. В визуальном интер
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} с началом \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs} и концом myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа Email и \hyperlink{FAQ.HowToSetName}{назовите} её email
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test"
-      \item \HowToSeeAsyncHandlerResult
-      \item Видим результат асинхронного обработчика в виде связей:
-      \begin{itemize}
-        \item \begin{handler_success_result_info}
-              \end{handler_success_result_info}\\
-
-        \item \begin{handler_fail_result_info}
-              \end{handler_fail_result_info}\\
-      \end{itemize}
+      \item \hyperlink{Handlers.Async.HowToGetResult}{Просмотрите результат асинхронного хендлера для связи email}
+      \item Видим \hyperlink{Handlers.Async.Result}{результат асинхронного обработчика в виде связей}
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи email на значение "test@deep"
-      \item \HowToSeeAsyncHandlerResult
-      \item Видим результат асинхронного обработчика в виде связей:
-      \begin{itemize}
-        \item \begin{handler_success_result_info}
-              \end{handler_success_result_info}\\
-
-        \item \begin{handler_fail_result_info}
-              \end{handler_fail_result_info}\\
-      \end{itemize}
+      \item \hyperlink{Handlers.Async.HowToGetResult}{Просмотрите результат асинхронного хендлера для связи email}
+      \item Видим \hyperlink{Handlers.Async.Result}{результат асинхронного обработчика в виде связей}
 \end{itemize}
 
 

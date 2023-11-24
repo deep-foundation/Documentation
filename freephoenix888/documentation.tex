@@ -619,8 +619,7 @@ async (
         \hyperlink{Core.Router.Description}{Router} до нашего \hyperlink{Core.Port.Description}{Port}
 \end{itemize}
 
-\paragraph{Справочник}
-\subparagraph{Параметры обработчика}
+\paragraph{Параметры обработчика}
 
 \urldef{\requrl}\url{https://expressjs.com/en/api.html#req}
 \urldef{\resurl}\url{https://expressjs.com/en/api.html#res}
@@ -645,6 +644,84 @@ async (
   \end{enumerate}
 \end{enumerate}
 \subsubsection{Серверные обработчики порта}
+\paragraph{Описание}
+Серверные обработчики порта предоставляют возможность обрабатывать запросы на определенном порту используя docker container. Для иллюстрации, представьте, что адрес нашего веб-сервера - deep-foundation.com. Теперь мы можем легко настроить обработку определенного порта, например, 5000, следуя данной конструкции: deep-foundation.com:5000. Эта гибкость позволяет точно настраивать поведение сервера в зависимости от порта, что делает наш проект мощным инструментом для управления трафиком и обработки запросов с высокой точностью. Серверные обработчики реализованы с помощью npm пакета express
+\paragraph{Примеры}
+\subparagraph{Пример обработчика, использующего Docker Container под названием JS Docker Isolation Container}
+Docker Container под названием JS Docker Isolation Container обрабатывает маршрут /healtz. В нашем случае мы будем обрабатывать порт 5000, следовательно наш маршрут будет выглядеть так: deep-foundation.com:5000/healtz
+\begin{itemize}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
+        \begin{lstlisting}
+(request, response) => {
+    response.send("ok");
+}
+\end{lstlisting}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Port.Description}{Port} и \hyperlink{FAQ.HowToSetName}{назовите} её myPort
+  \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи myPort на значение 5000
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandlePort.Description}{HandlePort} с началом myPort и концом \hyperlink{Core.JSDockerIsolationProvider.Description}{JSDockerIsolationProvider}
+  \item Перейдите по адресу deep-foundation.com:5000/healtz (вместо deep-foundation.com используйте свой адрес, на котором находится deep) и увидите ответ "ok" % TODO: Точно ок?
+\end{itemize}
+
+\subparagraph{Обработчик, обрабатывающий входящий запрос}
+В данном примере обработчик будет проверять поле isOk в входящем запрос, если
+он true, то мы ответим строкой "ok", иначе "not ok"
+\begin{itemize}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
+        \begin{lstlisting}
+async (
+  request,
+  response,
+) => {
+  if(request.isOk) {
+    response.send("ok") 
+  } else {
+    response.send("not ok")
+  }
+}
+\end{lstlisting}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} от
+        \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
+        до нашего \hyperlink{Core.SyncTextFile.Description}{SyncTextFile}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Route.Description}{Route}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandleRoute.Description}{HandleRoute} от нашего
+        \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Handler.Description}{Handler}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Router.Description}{Router}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterStringUse.Description}{RouterStringUse} от нашего
+        \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Router.Description}{Router},
+        с
+        значением
+        веб-маршрута, который должен обрабатываться, например /my-path
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Port.Description}{Port} с значением порта, который должен
+        обрабатываться, например
+        5000
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterListening.Description}{RouterListening} от нашего
+        \hyperlink{Core.Router.Description}{Router} до нашего \hyperlink{Core.Port.Description}{Port}
+\end{itemize}
+
+\paragraph{Параметры обработчика}
+
+\urldef{\requrl}\url{https://expressjs.com/en/api.html#req}
+\urldef{\resurl}\url{https://expressjs.com/en/api.html#res}
+\urldef{\midwareurl}\url{https://expressjs.com/en/guide/using-middleware.html}
+
+\begin{enumerate}
+  \item{request} \texttt{Объект, который представляет HTTP-запрос и имеет
+    свойства для
+    строки запроса, параметров, тела, HTTP-заголовков и т. д. Подробное
+    описание:
+    \requrl}
+  \item{response} \texttt{Объект, который представляет HTTP-ответ, который
+    приложение
+    Express отправляет при получении HTTP-запроса. Подробное описание:
+    \resurl}
+  \item{otherArgs} Объект, содержащий поля:
+  \begin{enumerate}
+    \item \texttt{deep} Дип Клиент
+    \item \texttt{require} - функция для импортирования npm пакетов
+    \item \texttt{next} - функция для передачи работы другому
+          обработчику. Подробное описание: \midwareurl
+  \end{enumerate}
+\end{enumerate}
 % TODO
 TODO: В разработке
 \subsubsection*{Серверные обработчики по расписанию}

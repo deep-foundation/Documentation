@@ -558,28 +558,28 @@ deep-foundation.com/my-path:5000.
 \paragraph{Примеры}
 \subparagraph{Обработчик, возвращающий "ok" в любом случае}
 \begin{itemize}
-  \item Создать \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
         \begin{lstlisting}
 (request, response) => {
     response.send("ok");
 }
 \end{lstlisting}
-  \item Создать \hyperlink{Core.Handler.Description}{Handler} от
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} от
         \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
         до нашего \hyperlink{Core.SyncTextFile.Description}{SyncTextFile}
-  \item Создать \hyperlink{Core.Route.Description}{Route}
-  \item Создать \hyperlink{Core.HandleRoute.Description}{HandleRoute} от нашего
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Route.Description}{Route}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandleRoute.Description}{HandleRoute} от нашего
         \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Handler.Description}{Handler}
-  \item Создать \hyperlink{Core.Router.Description}{Router}
-  \item Создать \hyperlink{Core.RouterStringUse.Description}{RouterStringUse} от нашего
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Router.Description}{Router}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterStringUse.Description}{RouterStringUse} от нашего
         \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Router.Description}{Router},
         с
         значением
         веб-маршрута, который должен обрабатываться, например /my-path
-  \item Создать \hyperlink{Core.Port.Description}{Port} с значением порта, который должен
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Port.Description}{Port} с значением порта, который должен
         обрабатываться, например
         5000
-  \item Создать \hyperlink{Core.RouterListening.Description}{RouterListening} от нашего
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterListening.Description}{RouterListening} от нашего
         \hyperlink{Core.Router.Description}{Router} до нашего \hyperlink{Core.Port.Description}{Port}
 \end{itemize}
 
@@ -587,7 +587,7 @@ deep-foundation.com/my-path:5000.
 В данном примере обработчик будет проверять поле isOk в входящем запрос, если
 он true, то мы ответим строкой "ok", иначе "not ok"
 \begin{itemize}
-  \item Создать \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким кодом:
         \begin{lstlisting}
 async (
   request,
@@ -600,22 +600,22 @@ async (
   }
 }
 \end{lstlisting}
-  \item Создать \hyperlink{Core.Handler.Description}{Handler} от
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Handler.Description}{Handler} от
         \hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
         до нашего \hyperlink{Core.SyncTextFile.Description}{SyncTextFile}
-  \item Создать \hyperlink{Core.Route.Description}{Route}
-  \item Создать \hyperlink{Core.HandleRoute.Description}{HandleRoute} от нашего
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Route.Description}{Route}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.HandleRoute.Description}{HandleRoute} от нашего
         \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Handler.Description}{Handler}
-  \item Создать \hyperlink{Core.Router.Description}{Router}
-  \item Создать \hyperlink{Core.RouterStringUse.Description}{RouterStringUse} от нашего
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Router.Description}{Router}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterStringUse.Description}{RouterStringUse} от нашего
         \hyperlink{Core.Route.Description}{Route} до нашего \hyperlink{Core.Router.Description}{Router},
         с
         значением
         веб-маршрута, который должен обрабатываться, например /my-path
-  \item Создать \hyperlink{Core.Port.Description}{Port} с значением порта, который должен
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Port.Description}{Port} с значением порта, который должен
         обрабатываться, например
         5000
-  \item Создать \hyperlink{Core.RouterListening.Description}{RouterListening} от нашего
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.RouterListening.Description}{RouterListening} от нашего
         \hyperlink{Core.Router.Description}{Router} до нашего \hyperlink{Core.Port.Description}{Port}
 \end{itemize}
 

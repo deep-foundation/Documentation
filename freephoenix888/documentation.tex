@@ -951,22 +951,22 @@ TODO: В разработке
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким
         значением:
         \begin{lstlisting}
-    (deep) => {
-        await deep.insert({
-            type_id: await deep.id("@deep-foundation/core", "SyncTextFile"),
-            string: {
-                  data: {
-                        value: "Hi!"
-                  }
-            }
-            in: {
-                  data: {
-                        type_id: await deep.id("@deep-foundation/core", "Contain"),
-                        from_id: await deep.id("deep", "admin"),
-                  }
-            }
-        })
-    }
+(deep) => {
+    await deep.insert({
+        type_id: await deep.id("@deep-foundation/core", "SyncTextFile"),
+        string: {
+              data: {
+                    value: "Hi!"
+              }
+        }
+        in: {
+              data: {
+                    type_id: await deep.id("@deep-foundation/core", "Contain"),
+                    from_id: await deep.id("deep", "admin"),
+              }
+        }
+    })
+}
     \end{lstlisting}
         и \hyperlink{FAQ.HowToSetName}{назовите} её syncTextFile
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа

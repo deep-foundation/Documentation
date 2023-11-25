@@ -1358,6 +1358,18 @@ await deep.select(
 );
 \end{lstlisting}
 
+\subparagraph{Получение пакета @deep-foundation/core}
+\leavevmode
+\begin{lstlisting}
+await deep.id("@deep-foundation/core")
+\end{lstlisting}
+
+\subparagraph{Получение связи Type из @deep-foundation/core}
+\leavevmode
+\begin{lstlisting}
+await deep.id("@deep-foundation/core", "Type")
+\end{lstlisting}
+
 \subsubsection{Обновление связей}
 
 Примечание: используйте любое другое ограничение, например, \{from: 100, to:

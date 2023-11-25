@@ -1458,9 +1458,15 @@ await deep.delete(
 \begin{lstlisting}
   await deep.id("A", "B", "C");
 \end{lstlisting}
-\subsection{deep.name}
+\subsubsection{deep.name}
 У Дип Клиента есть метод name, который позволяет получить название связи. \\
 Алгоритм работы: ищется связь типа \hyperlink{Core.Contain.Description}{Contain} ведущей к нужной связи, возвращается значение \hyperlink{Core.Contain.Description}{Contain}'a
+\paragraph{Примеры}
+\subparagraph{Получение названия связи Contain}
+\begin{lstlisting}
+  const containTypeLinkId = await deep.id("@deep-foundation/core", "Contain")
+  await deep.name(containTypeLinkId);
+\end{lstlisting}
 \subsection{Таблицы}
 Deep использует различные таблицы, такие как links (для хранения связей) и
 numbers, strings, objects (для хранения значений привязанных к связям).

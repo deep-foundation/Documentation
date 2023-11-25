@@ -806,7 +806,7 @@ async (
   response,
 ) => {
   if(request.isOk) {
-    response.send("ok") 
+    response.send("ok")
   } else {
     response.send("not ok")
   }
@@ -1515,7 +1515,7 @@ await deep.insert({
 \subparagraph{Программно}
 \begin{verbatim}
 await deep.insert({
-  type_id: await deep.id("@deep-foundation/core", "Type"), 
+  type_id: await deep.id("@deep-foundation/core", "Type"),
   from_id: await deep.id("@deep-foundation/core", "Type"),
   to_id: await deep.id("@deep-foundation/core", "Type"),
 });

@@ -1,0 +1,61 @@
+\subsection{Таблицы}
+Deep использует различные таблицы, такие как links (для хранения связей) и
+numbers, strings, objects (для хранения значений привязанных к связям).
+
+\begin{itemize}
+      \item \textbf{links} - связи
+      \item \textbf{strings} - строковые значения
+      \item \textbf{numbers} - числовые значения
+      \item \textbf{objects} - объектные значения (фактически JSON, поэтому
+            можно
+            вставлять числа/строки в таблицу objects, а не только объекты)
+      \item \textbf{selectors} - селекторы
+      \item \textbf{mp} - материализация пути связей
+      \item \textbf{tree} - деревья
+      \item \textbf{\texttt{promise\_links}} - для очереди выполнения
+            обработчиков
+      \item \textbf{\texttt{handlers}} - обработчики
+      \item \textbf{\texttt{reserved}} - зарезервированные связи
+      \item \textbf{\texttt{bool\_exp}} - используется для компиляции
+            дополнительных условий в селекторах
+      \item \textbf{\texttt{can}} - позволяет ответить быстро на вопрос есть ли
+            у
+            той или иной связи прав
+      \item \textbf{\texttt{files}} - файлы
+\end{itemize}
+
+\subsubsection{Часто задаваемые вопросы}
+\paragraph{Как дать название связи?}
+\hypertarget{FAQ.HowToSetName}{Что бы дать название связи}, нужно изменить
+значение \hyperlink{Core.Contain.Description}{Contain} связи, которая указывает
+на вашу
+связь. \\
+\textbf{Исключения:}
+\begin{itemize}
+      \item \hyperlink{Core.Package.Description}{Package}
+      \item \hyperlink{Core.Package.Description}{User}
+\end{itemize}
+\paragraph{Как вставить связь без начала и
+      конца?}\hypertarget{FAQ.HowToInsertLinkWithoutFromAndTo}{}
+\subparagraph{В DeepCase}
+При \hyperlink{DeepCase.InsertLink.Description}{вставке связи} нажмите в пустом
+месте
+\subparagraph{Программно}
+\begin{verbatim}
+await deep.insert({
+  type_id: await deep.id("@deep-foundation/core", "Type"), // from_id и to_id не указаны
+});
+\end{verbatim}
+\paragraph{Как вставить связь с началом и
+      концом?}\hypertarget{FAQ.HowToInsertLinkWithFromAndTo}{}
+\subparagraph{В DeepCase}
+При \hyperlink{DeepCase.InsertLink.Description}{вставке связи} нажмите на
+начале, и не отпуская протяните линию до конца
+\subparagraph{Программно}
+\begin{verbatim}
+await deep.insert({
+  type_id: await deep.id("@deep-foundation/core", "Type"),
+  from_id: await deep.id("@deep-foundation/core", "Type"),
+  to_id: await deep.id("@deep-foundation/core", "Type"),
+});
+\end{verbatim}

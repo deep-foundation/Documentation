@@ -1,0 +1,207 @@
+\subsection{Дип клиент}
+Дип клиент это
+\href{https://github.com/deep-foundation/deeplinks/blob/main/imports/client.tsx}{JavaScript
+      класс}, находящийся в npm библиотеке
+\href{https://www.npmjs.com/package/@deep-foundation/deeplinks}{@deep-foundation/deeplinks}.
+Предназначен для использования дипа
+программно в JavaScript среде. Присутствует поддержка TypeScript. \\
+\href{https://deep-foundation.github.io/deeplinks/classes/client.DeepClient.html}{\textbf{Документация}}
+
+\subsubsection{Вставка связей}
+
+\paragraph{Примеры}
+
+\subparagraph{Вставка связи с типом 1}
+\leavevmode
+\begin{lstlisting}
+await deep.insert({
+  type_id: 1,
+});
+\end{lstlisting}
+
+\subparagraph{Вставка связи с типом Type}
+\leavevmode
+\begin{lstlisting}
+await deep.insert({
+  type_id: await deep.id("@deep-foundation/core", "Type"),
+});
+\end{lstlisting}
+
+\subparagraph{Вставка связи с типом Reply из пакета messenger}
+\leavevmode
+\begin{lstlisting}
+await deep.insert({
+  type_id: await deep.id("messenger", "Reply"),
+  from_id: await deep.id("MyPackageName", "MyMessage"),
+  to_id: await deep.id("MyPackageName", "MyConversation"),
+});
+\end{lstlisting}
+
+\subparagraph{Вставка строкового значения для связи 100}
+\leavevmode
+\begin{lstlisting}
+await deep.insert(
+  {
+    link_id: 100,
+    value: "MyValue",
+  },
+  {
+    table: "strings",
+  }
+);
+\end{lstlisting}
+
+\subsubsection{Получение связей}
+
+\paragraph{Примеры}
+
+\subparagraph{Получение связи с типом 1}
+\leavevmode
+\begin{lstlisting}
+await deep.select({
+  type_id: 1,
+});
+\end{lstlisting}
+
+\subparagraph{Получение связи с типом Type}
+\leavevmode
+\begin{lstlisting}
+await deep.select({
+  type_id: await deep.id("@deep-foundation/core", "Type"),
+});
+\end{lstlisting}
+
+\subparagraph{Получение связи с типом Reply из пакета messenger}
+\leavevmode
+\begin{lstlisting}
+await deep.select({
+  type_id: await deep.id("messenger", "Reply"),
+  from_id: await deep.id("MyPackageName", "MyMessage"),
+  to_id: await deep.id("MyPackageName", "MyConversation"),
+});
+\end{lstlisting}
+
+\subparagraph{Получение строкового значения для связи 100}
+\leavevmode
+\begin{lstlisting}
+await deep.select(
+  {
+    link_id: 100,
+  },
+  {
+    table: "strings",
+  }
+);
+\end{lstlisting}
+
+\subsubsection{Обновление связей}
+
+Примечание: используйте любое другое ограничение, например, \{from: 100, to:
+150\}.
+
+\paragraph{Примеры}
+
+\subparagraph{Обновление начала и конца}
+\leavevmode
+\begin{lstlisting}
+await deep.update(
+  {
+    id: 1,
+  },
+  {
+    from_id: 5,
+    to_id: 5
+  }
+);
+\end{lstlisting}
+
+\subparagraph{Обновление строкового значения}
+\leavevmode
+\begin{lstlisting}
+await deep.update(
+  {
+    link_id: 1,
+  },
+  {
+    value: "MyNewValue",
+  },
+  {
+    table: "strings",
+  }
+);
+\end{lstlisting}
+
+\subsubsection{Удаление связей}
+
+\paragraph{Примеры \\}
+
+Удаление связи с типом 1
+
+\leavevmode
+\begin{lstlisting}
+await deep.delete({
+  type_id: 1,
+});
+\end{lstlisting}
+
+Удаление связи с типом \hyperlink{Core.Type.Description}{Type}
+
+\leavevmode
+\begin{lstlisting}
+await deep.delete({
+  type_id: await deep.id("@deep-foundation/core", "Type"),
+});
+\end{lstlisting}
+
+Удаление связи с определённым типом, началом, концом
+\leavevmode
+\begin{lstlisting}
+await deep.delete({
+  type_id: 5,
+  from_id: 10,
+  to_id: 15,
+});
+\end{lstlisting}
+
+Удаление строкового значения для связи 100
+\leavevmode
+\begin{lstlisting}
+await deep.delete(
+  {
+    link_id: 100,
+  },
+  {
+    table: "strings",
+  }
+);
+\end{lstlisting}
+
+\subsubsection{deep.id}
+У Дип Клиента есть метод id, который позволяет получить идентификатор связи,
+используя название пакета/пользователя и название связи
+\paragraph{Примеры}
+\subparagraph{Получение связи MyType из пакета MyPackage}
+\begin{lstlisting}
+  await deep.id("MyPackage", "MyType");
+\end{lstlisting}
+
+\subparagraph{Получение пакета MyPackage}
+\begin{lstlisting}
+  await deep.id("MyPackage");
+\end{lstlisting}
+
+\subparagraph{Получение связи C, которая вложена в B, которая вложена в A}
+\begin{lstlisting}
+  await deep.id("A", "B", "C");
+\end{lstlisting}
+\subsubsection{deep.name}
+У Дип Клиента есть метод name, который позволяет получить название связи. \\
+Алгоритм работы: ищется связь типа
+\hyperlink{Core.Contain.Description}{Contain} ведущей к нужной связи,
+возвращается значение \hyperlink{Core.Contain.Description}{Contain}'a
+\paragraph{Примеры}
+\subparagraph{Получение названия связи Contain}
+\begin{lstlisting}
+  const containTypeLinkId = await deep.id("@deep-foundation/core", "Contain")
+  await deep.name(containTypeLinkId);
+\end{lstlisting}

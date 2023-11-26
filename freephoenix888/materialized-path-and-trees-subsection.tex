@@ -1,0 +1,86 @@
+\subsection{Материализованный путь, деревья}
+\subsubsection{Описание}
+Для каждой связи выстраивается материализованный путь. Деревья используют эту
+концепцию и позволяют упрощать взаимодействие с группами связей.
+Самым простым и понятным примером является
+\hyperlink{containTree.Deletion.Example}{Удаление ниже по дереву containTree}
+Вы сами можете создавать деревья!
+\subsubsection{Примеры}
+\paragraph{Создание дерева}
+\begin{itemize}
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Tree}{Tree} и \hyperlink{FAQ.HowToSetName}{назовите} её
+            myTree
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Type.Description}{Type} и
+            \hyperlink{FAQ.HowToSetName}{назовите} её MyNode1
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Type.Description}{Type} и
+            \hyperlink{FAQ.HowToSetName}{назовите} её MyNode2
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Type.Description}{Type}, с началом
+            \hyperlink{Core.Any.Description}{Any}, концом
+            \hyperlink{Core.Any.Description}{Any} и
+            \hyperlink{FAQ.HowToSetName}{назовите} её
+            MyDownLink
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Type.Description}{Type}, с началом
+            \hyperlink{Core.Any.Description}{Any}, концом
+            \hyperlink{Core.Any.Description}{Any} и
+            \hyperlink{FAQ.HowToSetName}{назовите} её
+            MyUpLink
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь
+            \hyperlink{Core.TreeIncludeNode.Description}{TreeIncludeNode} от
+            экземпляра \hyperlink{Core.Tree.Description}{Tree} до MyNode1
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь
+            \hyperlink{Core.TreeIncludeNode.Description}{TreeIncludeNode} от
+            экземпляра \hyperlink{Core.Tree.Description}{Tree} до MyNode2
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь
+            \hyperlink{Core.TreeIncludeDown.Description}{TreeIncludeDown} от
+            экземпляра \hyperlink{Core.Tree.Description}{Tree} до MyDownLink
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь
+            \hyperlink{Core.TreeIncludeNode.Description}{TreeIncludeUp} от
+            экземпляра \hyperlink{Core.Tree.Description}{Tree} до MyUpLink
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            MyNode1
+            и \hyperlink{FAQ.HowToSetName}{назовите} её myNode1
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            MyNode2
+            и \hyperlink{FAQ.HowToSetName}{назовите} её myNode2
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            MyDownLink с началом myNode1 и концом myNode2 и
+            \hyperlink{FAQ.HowToSetName}{назовите} её myDownLink
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            MyUpLink с началом myNode2 и концом myNode1 и
+            \hyperlink{FAQ.HowToSetName}{назовите} её myUpLink
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.Space.Description}{Space}, что бы пеерстать видеть
+            наши
+            связи и показать
+            работу деревьев, используя Traveller
+      \item Открываем контекстное меню экземпляра
+            \hyperlink{Core.Space.Description}{Space} и
+            нажимаем кнопку "Space" что бы перейти в это пространство
+      \item Открываем контекстное меню, нажимаем кнопку Query, вводим в поле
+            для
+            ввода myNode1, нажимаем на myNode1, нажимаем галочку, что бы
+            увидеть
+            эту связь
+      \item Открываем контекстное меню, нажимаем кнопку
+            \hyperlink{Traveller.Description}{Traveller}, нажимаем кнопку Down,
+            нажимаем на
+            кнопку
+            myTree
+      \item Созерцайте путешествие от связи myNode1 вниз по дереву myTree, вы
+            должны видеть связи myNode1, myDownLink, myNode2
+      \item Открываем меню DeepCase, нажимаем крестик около слова Space, что бы
+            выйти из текущего пространства и вернуться в пространство нашего
+            пользователя
+      \item Снова создаём новое пространство, заходим в него
+      \item Снова с помощью Query запрашиваем связь, но уже myNode2
+      \item С помощью \hyperlink{Traveller.Description}{Traveller} запрашиваем
+            связи вверх
+            по дереву myTree
+      \item Видим связи myNode2, myDownLink, myNode1
+      \item Возвращаемся в предыдущее пространство
+\end{itemize}

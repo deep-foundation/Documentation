@@ -1,0 +1,159 @@
+\subsection{DeepCase}
+\subsubsection{Описание}
+DeepCase\hypertarget{DeepCase.Description}{} является графическим визуальным
+интерфейсом Deep.
+\hyperlink{DeepCase.Description}{DeepCase} позволяет взаимодействовать со
+связями:
+вставлять,
+обновлять, удалять, просматривать, делать выборку связей,
+путешествовать по ним, используя traveller, и ещё множество возможностей
+\hyperlink{DeepCase.Description}{DeepCase} это npm пакет, который позволяет
+встраивать
+его компоненты, включая
+отдельные клиентские обработчики, используя ClientHandler компонент в любой
+проект, использующий npm пакет React
+\subsubsection{Основные возможности}
+\paragraph{Виуализация связи}
+Визуализация конкретных связей реализована при помощи клиентских обработчиков.
+Что бы увидеть визуализацию связи, нужно нажать на неё
+\paragraph{Вставить связь}
+Для того, что бы \hypertarget{DeepCase.InsertLink.Description}{вставить связь},
+нужно
+нажать правкую кнопку мыши в пустом
+месте и в открытом контекстном меню нажать на "Insert". После этого откроется
+меню вставки связи, в котором есть поле для ввода что бы фильтровать связи по
+названию, а так же сами связи ниже поля для ввода. Введите название нужной
+связи, например \hyperlink{Core.Type.Description}{Type} и ниже найдите связь с
+таким
+названием. Вы можете
+заметить, что там есть как минимум два \hyperlink{Core.Type.Description}{Type},
+один со
+значком звёздочки, а
+другой со значком папки. Связь с значком папки это
+\hyperlink{Core.Contain.Description}{Contain}, следовательно нажав
+на стрелку влево около этой связи, мы сможем увидеть откуда ведёт
+\hyperlink{Core.Contain.Description}{Contain}
+(после нажатия активная связь появляется над полем для ввода), а нажав на
+стрелку вправо сможем увидеть на какую связь указывает
+\hyperlink{Core.Contain.Description}{Contain}, следовательно
+\hyperlink{Core.Contain.Description}{Contain} будет указывать на ту самую связь
+со
+звёздочкой, то есть вы можете
+выбрать \hyperlink{Core.Type.Description}{Type} либо нажав на стрелку вправо у
+его
+\hyperlink{Core.Contain.Description}{Contain}'a, либо нажав на сам
+\hyperlink{Core.Type.Description}{Type} (на название). Удостоверьтесь, что над
+полем для
+ввода отображается нужная
+связь и после этого нажмите на галочку справа внизу от меню вставки, что бы
+активировать вставку этой связи. После этого вы увидите уведомление слева внизу
+о том, что вы сейчас вставляете связь определённого типа, а так же сказано
+какая это связь, Node (точка), или же она является связью между двумя
+определёнными типами связей. Если это Node вам предложат нажать в любом
+свободном месте, что бы вставить связь, если же это не Node, но нажать не
+отпуская на связь и привести появившуюся линию к другой связи, что бы создать
+связь между этими связями. Так же можно нажать крестик на уведомлении что бы
+отменить вставку
+\paragraph{Обновить связь}
+Для того, что бы обновить связь, нужно открыть контекстное меню связи и нажать
+на кнопку Update, после чего протянуть линию от нового начала до нового конца
+связи
+Заметка: если не протягивать линию, а нажать на связь один раз, то она станет и
+началом и концом связи
+\paragraph{Удалить связь}
+Для того, что бы удалить связь, нужно открыть контекстное меню связи и нажать
+на кнопку "Delete"
+\paragraph{Удаление ниже по дереву
+      containTree}\hypertarget{containTree.Deletion.Example}{}
+Для того, что бы удалить все связи ниже по дереву
+\hyperlink{containTree.Description}{containTree}, нужно открыть контекстное
+меню связи
+и нажать на кнопку "Delete Down"
+\paragraph*{Traveller}
+\hyperlink{Traveller.Description}{Traveller} используется для путешествия по
+связям.
+При нажатии на кнопку Traveller в контекстном меню вам сначала нужно выбрать в
+каком направлении вы хотите путешествовать, а затем выставить ограничение
+путешествия.
+Если вы путешествуете вверх или вниз по дереву, следовательно после этого вам
+предоставят возможность выбрать дерево, по которому вы будете путешествовать.
+Если вы путешествуете по чему-либо другому, например in/out, то после этого вам
+предоставят возможность выбрать отфильтровать эти связи по определённому
+признаку, либо же показать все связи
+\paragraph*{Редактор}
+\hypertarget{Editor.Description}{Редактор} используется для:
+\begin{itemize}
+      \item Редактирования значения связей
+      \item Управлением обработчиками
+      \item Просмотра результатов обработчиков
+\end{itemize}
+\paragraph{Query}
+Query используется для отображения связей.
+% \newcommand{\DeepCaseQueryByUsingContextMenu}{%
+%       Упрощённое использование, используя Query из контексного меню
+%       \begin{itemize}
+%             \item Откройте контекстное меню
+%             \item Нажмите Query
+%             \item Введите @deep-foundation/core в поле для ввода
+%             \item Нажмите на название пакета в появившемся списке
+%             \item Убедитесь, что связь отобразилась над полем для ввода
+%             \item Нажмите на галочку справа внизу от окна Query
+%       \end{itemize}%
+% }
+% \newcommand{\DeepCaseQueryByUsingClientHandlerQueryCode}{%
+%                   \begin{lstlisting}
+%             {
+%                   id: {
+%                         _id: ["@deep-foundation/core"]
+%                   }
+%             }
+%       \end{lstlisting}%
+% }
+% \newcommand{\DeepCaseQueryByUsingClientHandler}{%
+%       Продвинутое использование, используя клиентский обработчик
+%       \begin{itemize}
+%             \item \hyperlink{DeepCase.InsertLink.Description}{Вставить} связь типа
+%                   \hyperlink{Core.Query.Description}{Query} и
+%                   \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
+%             \item Нажмите на myQuery
+%             \item Введите следующий запрос в появившееся поле для ввода:
+%                   \DeepCaseQueryByUsingClientHandlerQueryCode
+%             \item Нажмите на лампочку справа от поля для ввода
+%             \item Созерцайте пакет @deep-foundation/core
+%       \end{itemize}%
+% }
+% \newcommand{\DeepCaseQueryByUsingLinksQueryCode}{%
+% \begin{lstlisting}
+%       {
+%             id: {
+%                   _id: ["@deep-foundation/core"]
+%             }
+%       }
+% \end{lstlisting}%
+% }
+% \newcommand{\DeepCaseQueryByUsingLinks}{%
+%       Продвинутое использование, используя связи
+%       \begin{itemize}
+%             \item \hyperlink{DeepCase.InsertLink.Description}{Вставить}
+%                   связь типа \hyperlink{Core.Query.Description}{Query} и
+%                   \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
+%             \item \hyperlink{DeepCase.UpdatetLink.Description}{Обновить}
+%                   значение связь myQuery на
+%                   \DeepCaseQueryByUsingLinksQueryCode
+%             \item \hyperlink{DeepCase.InsertLink.Description}{Вставить}
+%                   связь типа \hyperlink{Core.Active.Description}{Active} от
+%                   \hyperlink{Container.Description}{контейнера}, в котором должна отображаться
+%                   связь, до myQuery
+%             \item Созерцайте пакет @deep-foundation/core
+%       \end{itemize}%
+% }
+% \newcommand{\DeepCaseQueryUsing}{
+%       \begin{itemize}
+%             \item \DeepCaseQueryByUsingContextMenu
+%             \item \DeepCaseQueryByUsingClientHandler
+%             \item \DeepCaseQueryByUsingLinks
+%       \end{itemize}
+% }
+% \DeepCaseQueryUsing
+
+% Дип клиент

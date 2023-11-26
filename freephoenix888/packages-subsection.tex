@@ -1,0 +1,68 @@
+\subsection{Пакеты}
+\subsubsection{Описание}
+Пакет предназначены для упаковки связей вместе в одну связь, которую можно
+выложить, скачать, точно так-же, как вы устанавливаете какое либо программное
+обеспечение состоящее из различных файлов. \\
+Пакет это тоже связь, экземпляр \hyperlink{Core.Package}{Package} \\
+Принадлежность связи к пакету определяется с помощью экземпляра
+\hyperlink{Core.Contain.Description}{Contain}. То есть что бы ваша связь
+находилась в
+пакетее - нужно иметь экземпляр \hyperlink{Core.Contain.Description}{Contain},
+ведущий
+от пакета к связи \\
+Если связь пакета А указывает началом/концом/типом на связь пакета Б, то пакет
+А становится зависимым от пакета Б \\
+\subsubsection{Примеры}
+\subparagraph{Создание пакета}
+\begin{itemize}
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.Package.Description}{Type}
+            \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+            и
+            \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage
+\end{itemize}
+\subparagraph{Добавление связи в пакет}
+\begin{itemize}
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.Package.Description}{Type}
+            \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+            и
+            \hyperlink{FAQ.HowToSetName}{назовите} её MyPackage. Кстати, теперь
+            ваш
+            пакет
+            зависит от пакета
+            \hyperlink{Core.Description}{@deep-foundation/core},
+            потому что
+            использует его связь \hyperlink{Core.Type.Description}{Type} как
+            тип
+            для нашей связи
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.Type.Description}{Type}
+            \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без
+                  начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её
+            MyNode1
+\end{itemize}
+\subparagraph{Публикация пакета}
+\begin{itemize}
+      \item Что бы опубликовать пакет нужно
+            \hyperlink{DeepCase.InsertLink.Description}{вставить} связь типа
+            \hyperlink{NpmPackager.Token.Description}{Type}
+            \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+            и
+            дать ей
+            значение равное вашему токену из npm, который вы можете получить на
+            \url{https://www.npmjs.com/}
+      \item Нажмите левой кнопкой мыши на MyPackage и увидите клиентский
+            обработчик, показывающий визуализацию для пакета. Введите название
+            и
+            версию
+            пакета и нажмите кнопку Save, а затем Publish
+      \item Теперь нам нужно увидеть связь Publish, которая создалась благодаря
+            нажатию на кнопку Publish. Откройте контекстное меню MyPackage,
+            нажмите
+            Traveller->Out->Publish
+      \item \hyperlink{Handlers.Async.HowToGetResult}{Просмотрите результат
+                  асинхронного хендлера для связи Publish}
+\end{itemize}
+
+% Обработчики

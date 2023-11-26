@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{graphicx}
+\usepackage{titletoc}
+\usepackage{listings}
+\usepackage{titling}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\renewcommand{\contentsname}{Содержание}
+
+\title{Deep Foundation}
+\author{FreePhoenix888}
+\date{November 2023}
+
+\titleformat{\paragraph}
+    {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+\newcommand\sublevel[1]{%
+  \par\medskip\noindent\textbf{#1}\quad\ignorespaces}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+
+\paragraph{Удаление связи с типом \hyperref[typeNote]{Type} из пакета @deep-foundation/core}
+\leavevmode
+\sublevel{Subparagraph equivalent here}
+\phantomsection
+\label{typeNote}\footnote{Связь Type находится в встроенном пакете @deep-foundation/core}
+
+\end{document}

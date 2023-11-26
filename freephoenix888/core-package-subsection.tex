@@ -1,0 +1,102 @@
+\subsection{@deep-foundation/core}
+\subsubsection{Описание}\hypertarget{Core.Description}{}
+@deep-foundation/core это встроенный пакет, которые
+содержит самые важные типы для работы с Deep
+\subsubsection{Связи}
+\paragraph*{Type}\hypertarget{Core.Type.Description}{}
+Тип Type используется для создания новых типов
+\paragraph*{Contain}\hypertarget{Core.Contain.Description}{}
+Тип Contain используется для обозначения
+принадлежности, а так же для присваивания имени связи. Например пакет, что бы
+содержать в себе другие связи - имеет
+\hyperlink{Core.Contain.Description}{Contain} от себя
+до другой связи. Если вы хотите дать имя связи - обновите значение экземпляра
+\paragraph*{Package}\hypertarget{Core.Package.Description}{}
+Тип Package олицетворяет пакет, который содержит в себе связи и/или зависит от
+связей из других пакетов
+\hyperlink{Core.Contain.Description}{Contain}
+\paragraph*{SyncTextFile}\hypertarget{Core.SyncTextFile.Description}{}
+Тип SyncTextFile используется для хранения
+любого строкового значения
+\paragraph*{Any}\hypertarget{Core.Any.Description}{}
+Тип Any может использоваться для ограничений
+\subparagraph*{Начало/конец типа}
+Например есть при создании типа А вы можете указать, что его началом
+обязательно должен быть Б, а концом может быть любая связь, для этого концом у
+типа будет указан Any
+\subparagraph*{Обрабатываемый тип}
+Any может использоваться как обрабатываемый тип, в таком случае обработчик
+будет обрабатывать экземпляры всех типов
+\paragraph*{Handler}\hypertarget{Core.Handler.Description}{}
+Тип Handler используется для создания обработчика.
+Его началом является экземпляр \hyperlink{supports.Description}{Supports}, а
+концом
+любая связь, содержащая код в строковом значении
+\paragraph*{Supports}\hypertarget{Core.Supports.Description}{}
+Тип Supports используется для создания среды
+выполнения обработчика. Примером среды выполнения обработчика является
+\hyperlink{Core.dockerSupportsJs.Description}{dockerSupportsJs}
+\paragraph*{dockerSupportsJs}\hypertarget{Core.dockerSupportsJs.Description}{}
+Связь dockerSupportsJs используется для
+поддержки JavaScript в Docker. Что бы использовать эту среду для обработчика,
+нужно сделать эту связь началом связи
+\hyperlink{Core.Handler.Description}{Handler}
+\paragraph*{HandleInsert}\hypertarget{Core.HandleInsert.Description}{}
+Связь HandleInsert используется для обработки
+вставки экземпляров определённого типа. Например, что бы обрабатывать вставку
+экземпляров типа \hyperlink{Core.Type.Description}{Type}, нужно создать
+HandleInsert с
+началом типом \hyperlink{Core.Type.Description}{Type} и концом обработчиком, то
+есть
+экземпляром \hyperlink{Core.Handler.Description}{Handler}
+\paragraph*{HandleUpdate}\hypertarget{Core.HandleUpdate.Description}{}
+Связь HandleUpdate используется для обработки
+обновлений экземпляров определённого типа. Например, что бы обрабатывать
+обновления экземпляров типа \hyperlink{Core.Type.Description}{Type}, нужно
+создать
+HandleUpdate с началом \hyperlink{Core.Type.Description}{Type} и концом
+обработчиком,
+то есть экземпляром \hyperlink{Core.Handler.Description}{Handler}
+\paragraph*{HandleUpdate}\hypertarget{Core.HandleDelete.Description}{}
+Связь HandleDelete используется для обработки
+удалений экземпляров определённого типа. Например, что бы обрабатывать удаления
+экземпляров типа \hyperlink{Core.Type.Description}{Type}, нужно создать
+HandleDelete с
+началом типом \hyperlink{Core.Type.Description}{Type} и концом обработчиком, то
+есть
+экземпляром \hyperlink{Core.Handler.Description}{Handler}
+\paragraph*{Tree}\hypertarget{Core.Tree.Description}{}
+Тип Tree используется для создания дерева
+\paragraph*{TreeIncludeDown}\hypertarget{Core.TreeIncludeDown.Description}{}
+Тип TreeIncludeDown используется для
+включения в дерево связи, по направлению вниз
+\paragraph*{TreeIncludeUp}\hypertarget{Core.TreeIncludeUp.Description}{}
+Тип TreeIncludeUp используется для включения в
+дерево связи, по направлению вверх
+\paragraph*{TreeIncludeNode}\hypertarget{Core.TreeIncludeNode.Description}{}
+Тип TreeIncludeNode используется для
+включения в дерево связи, у которой нет начала и конца
+\paragraph*{Route}\hypertarget{Core.Route.Description}{}
+Тип Route используется для создания веб-маршрута
+\paragraph*{HandleRoute}\hypertarget{Core.HandleRoute.Description}{}
+Связь HandleRoute используется для обработки
+веб-маршрута
+\paragraph*{JSDockerIsolationProvider}\hypertarget{Core.JSDockerIsolationProvider.Description}{}
+Связь JSDockerIsolationProvider содержит название docker container'a,
+используемого для запуска JavaScript кода
+\paragraph*{Schedule}\hypertarget{Core.Schedule.Description}{}
+Тип Schedule используется для создания расписания
+\paragraph*{HandleSchedule}\hypertarget{Core.HandleSchedule.Description}{}
+Связь HandleSchedule используется для обработки расписания
+\paragraph*{Router}\hypertarget{Core.Router.Description}{}
+Тип Router используется для создания роутера
+\paragraph*{RouterStringUse}\hypertarget{Core.RouterStringUse.Description}{}
+Связь RouterStringUse используется для
+указания веб-маршрута, который должен обрабатываться
+\paragraph*{Port}\hypertarget{Core.Port.Description}{}
+Тип Port используется для создания порта
+\paragraph*{RouterListening}\hypertarget{Core.RouterListening.Description}{}
+Связь RouterListening используется для
+указания порта, который должен обрабатываться
+\paragraph*{Space}\hypertarget{Core.Space.Description}{}
+Тип Space используется для создания пространства

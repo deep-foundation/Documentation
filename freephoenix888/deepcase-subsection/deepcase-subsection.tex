@@ -89,71 +89,51 @@ DeepCase\hypertarget{DeepCase.Description}{} является графическ
 \end{itemize}
 \paragraph{Query}
 Query используется для отображения связей.
-% \newcommand{\DeepCaseQueryByUsingContextMenu}{%
-%       Упрощённое использование, используя Query из контексного меню
-%       \begin{itemize}
-%             \item Откройте контекстное меню
-%             \item Нажмите Query
-%             \item Введите @deep-foundation/core в поле для ввода
-%             \item Нажмите на название пакета в появившемся списке
-%             \item Убедитесь, что связь отобразилась над полем для ввода
-%             \item Нажмите на галочку справа внизу от окна Query
-%       \end{itemize}%
-% }
-% \newcommand{\DeepCaseQueryByUsingClientHandlerQueryCode}{%
-%                   \begin{lstlisting}
-%             {
-%                   id: {
-%                         _id: ["@deep-foundation/core"]
-%                   }
-%             }
-%       \end{lstlisting}%
-% }
-% \newcommand{\DeepCaseQueryByUsingClientHandler}{%
-%       Продвинутое использование, используя клиентский обработчик
-%       \begin{itemize}
-%             \item \hyperlink{DeepCase.InsertLink.Description}{Вставить} связь типа
-%                   \hyperlink{Core.Query.Description}{Query} и
-%                   \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
-%             \item Нажмите на myQuery
-%             \item Введите следующий запрос в появившееся поле для ввода:
-%                   \DeepCaseQueryByUsingClientHandlerQueryCode
-%             \item Нажмите на лампочку справа от поля для ввода
-%             \item Созерцайте пакет @deep-foundation/core
-%       \end{itemize}%
-% }
-% \newcommand{\DeepCaseQueryByUsingLinksQueryCode}{%
-% \begin{lstlisting}
-%       {
-%             id: {
-%                   _id: ["@deep-foundation/core"]
-%             }
-%       }
-% \end{lstlisting}%
-% }
-% \newcommand{\DeepCaseQueryByUsingLinks}{%
-%       Продвинутое использование, используя связи
-%       \begin{itemize}
-%             \item \hyperlink{DeepCase.InsertLink.Description}{Вставить}
-%                   связь типа \hyperlink{Core.Query.Description}{Query} и
-%                   \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
-%             \item \hyperlink{DeepCase.UpdatetLink.Description}{Обновить}
-%                   значение связь myQuery на
-%                   \DeepCaseQueryByUsingLinksQueryCode
-%             \item \hyperlink{DeepCase.InsertLink.Description}{Вставить}
-%                   связь типа \hyperlink{Core.Active.Description}{Active} от
-%                   \hyperlink{Container.Description}{контейнера}, в котором должна отображаться
-%                   связь, до myQuery
-%             \item Созерцайте пакет @deep-foundation/core
-%       \end{itemize}%
-% }
-% \newcommand{\DeepCaseQueryUsing}{
-%       \begin{itemize}
-%             \item \DeepCaseQueryByUsingContextMenu
-%             \item \DeepCaseQueryByUsingClientHandler
-%             \item \DeepCaseQueryByUsingLinks
-%       \end{itemize}
-% }
-% \DeepCaseQueryUsing
+\newcommand{\DeepCaseQueryByUsingContextMenu}{%
+      Упрощённое использование, используя Query из контексного меню
+      \begin{itemize}
+            \item Откройте контекстное меню
+            \item Нажмите Query
+            \item Введите @deep-foundation/core в поле для ввода
+            \item Нажмите на название пакета в появившемся списке
+            \item Убедитесь, что связь отобразилась над полем для ввода
+            \item Нажмите на галочку справа внизу от окна Query
+      \end{itemize}%
+}
+\newcommand{\DeepCaseQueryByUsingClientHandler}{%
+      Продвинутое использование, используя клиентский обработчик
+      \begin{itemize}
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+                  \hyperlink{Core.Query.Description}{Query} и
+                  \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
+            \item Нажмите на myQuery
+            \item Введите следующий запрос в появившееся поле для ввода: \input{../deepcase-subsection/query-core-package-listing.tex}
+            \item Нажмите на лампочку справа от поля для ввода
+            \item Созерцайте пакет @deep-foundation/core
+      \end{itemize}%
+}
+\newcommand{\DeepCaseQueryByUsingLinks}{%
+      Продвинутое использование, используя связи
+      \begin{itemize}
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте}
+                  связь типа \hyperlink{Core.Query.Description}{Query} и
+                  \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
+            \item \hyperlink{DeepCase.UpdatetLink.Description}{Обновить}
+                  значение связь myQuery на \input{../deepcase-subsection/query-core-package-listing.tex}
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте}
+                  связь типа \hyperlink{Core.Active.Description}{Active} от
+                  \hyperlink{Container.Description}{контейнера}, в котором должна отображаться
+                  связь, до myQuery
+            \item Созерцайте пакет @deep-foundation/core
+      \end{itemize}%
+}
+\newcommand{\DeepCaseQueryUsing}{
+      \begin{itemize}
+            \item \DeepCaseQueryByUsingContextMenu
+            \item \DeepCaseQueryByUsingClientHandler
+            \item \DeepCaseQueryByUsingLinks
+      \end{itemize}
+}
+\DeepCaseQueryUsing
 
-% Дип клиент
+

@@ -43,7 +43,7 @@ Any может использоваться как обрабатываемый 
 \hyperlink{Core.plv8SupportsJs.Description}{plv8SupportsJs}
 \paragraph*{plv8SupportsJs}\hypertarget{Core.plv8SupportsJs.Description}{}
 Связь plv8SupportsJs используется для
-поддержки JavaScript во время транзакции базы данных. Что бы использовать эту среду для обработчика,
+поддержки JavaScript во время транзакции базы данных. Что бы использовать эту среду для обработчика, 
 нужно сделать эту связь началом связи
 \hyperlink{Core.Handler.Description}{Handler}
 \paragraph*{HandleInsert}\hypertarget{Core.HandleInsert.Description}{}
@@ -116,3 +116,55 @@ HandleDelete с
 Тип String используется для обозначения числового значения. Например, что бы указать, что экземпляры Message могут иметь числовое значение - нужно Value от Message до Number  
 \paragraph*{Object}\hypertarget{Core.Object.Description}{}
 Тип String используется для обозначения строкового значения. Например, что бы указать, что экземпляры Message могут иметь объектное значение - нужно Value от Message до Object
+\paragraph*{Query}\hypertarget{Core.Query.Description}{}
+\newcommand{\QueryByUsingContextMenu}{%
+      Упрощённое использование, используя Query из контексного меню
+      \begin{itemize}
+            \item Откройте контекстное меню
+            \item Нажмите Query
+            \item Введите @deep-foundation/core в поле для ввода
+            \item Нажмите на название пакета в появившемся списке
+            \item Убедитесь, что связь отобразилась над полем для ввода
+            \item Нажмите на галочку справа внизу от окна Query
+      \end{itemize}%
+}
+\newcommand{\QueryByUsingClientHandler}{%
+      Продвинутое использование, используя клиентский обработчик
+      \begin{itemize}
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+                  \hyperlink{Core.Query.Description}{Query} и
+                  \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
+            \item Нажмите на myQuery
+            \item Введите следующий запрос в появившееся поле для ввода: \input{../core-package-subsection/query-core-package-listing.tex}
+            \item Нажмите на лампочку справа от поля для ввода
+            \item Созерцайте пакет @deep-foundation/core
+      \end{itemize}%
+}
+\newcommand{\QueryByUsingLinks}{%
+      Продвинутое использование, используя связи
+      \begin{itemize}
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте}
+                  связь типа \hyperlink{Core.Query.Description}{Query} и
+                  \hyperlink{FAQ.HowToSetName}{назовите} её myQuery
+            \item \hyperlink{DeepCase.UpdatetLink.Description}{Обновить}
+                  значение связь myQuery на \input{../core-package-subsection/query-core-package-listing.tex}
+            \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте}
+                  связь типа \hyperlink{Core.Active.Description}{Active} от
+                  \hyperlink{Container.Description}{контейнера}, в котором должна отображаться
+                  связь, до myQuery
+            \item Созерцайте пакет @deep-foundation/core
+      \end{itemize}%
+}
+\newcommand{\QueryUsing}{
+      \begin{itemize}
+            \item \QueryByUsingContextMenu
+            \item \QueryByUsingClientHandler
+            \item \QueryByUsingLinks
+      \end{itemize}
+}
+
+\newcommand*{\QueryDescription}{
+  Query используется для отображения связей.
+  \QueryUsing
+}
+\QueryDescription

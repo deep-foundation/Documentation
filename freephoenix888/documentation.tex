@@ -221,36 +221,22 @@
           начала и конца} и
         \hyperlink{FAQ.HowToSetName}{назовите} её Message
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+        \hyperlink{Core.Value.Description}{Value} от Message до
+        \hyperlink{Core.String.Description}{String} и \hyperlink{FAQ.HowToSetName}{назовите} её messageValue % TODO: Написать как увидеть эту связь. Использовать комманду для не повторения + ссылку на источник
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.Type.Description}{Type} от Message до Conversation
         и
         \hyperlink{FAQ.HowToSetName}{назовите} её Reply
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
-        Reply
-        от
-        Message до Conversation и \hyperlink{FAQ.HowToSetName}{назовите} её
-        UrgentMessage
+  Conversation
+        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца} и \hyperlink{FAQ.HowToSetName}{назовите} её myConversation
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
-        Reply
-        от
-        UrgentMessage до Conversation и
-        \hyperlink{FAQ.HowToSetName}{назовите}
-        её
-        UrgentReply
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
-        \hyperlink{Core.Value.Description}{Value} от UrgentMessage до
-        \hyperlink{Core.String.Description}{String}
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
-        \hyperlink{Core.Type.Description}{Conversation}
+  Message и \hyperlink{FAQ.HowToSetName}{назовите} её myMessage
         \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
+  \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение связи myMessage на "My Message!"
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
-        \hyperlink{Core.Type.Description}{UrgentMessage}
-        \hyperlink{FAQ.HowToInsertLinkWithoutFromAndTo}{без начала и конца}
-  \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} экземпляр
-        связи
-        UrgentMessage
-  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
-        UrgentReply от
-        UrgentMessage до Conversation
+        Reply от
+        myMessage до myConversation и \hyperlink{FAQ.HowToSetName}{назовите} её myReply
 \end{itemize}
 
 \subsection{Связи-типы}

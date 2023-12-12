@@ -29,6 +29,43 @@
 данных и в случае ошибки
 транзакция отменяется
 \subparagraph{Примеры}
+\paragraph{Создание обработчика с помощью редактора}
+\begin{itemize}
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.Type.Description}{Type} и
+            \hyperlink{FAQ.HowToSetName}{назовите} её Email
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с следующим
+            значением:
+            \begin{lstlisting}
+    ({ data: { newLink: emailLink } }) => {
+      const email = emailLink.value?.value;
+      if (!email) {
+      throw new Error(`Link ${emailLink.id} has not value`);
+      }
+      if (!email.includes("@")) {
+      throw new Error(`Email ${email} does not include @`);
+      }
+    };
+                \end{lstlisting}
+            и \hyperlink{FAQ.HowToSetName}{назовите} её myHandlerCode
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            \hyperlink{Core.Handler.Description}{Handler}
+            \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{с началом}
+            \hyperlink{Core.plv8SupportsJs.Description}{dockerSupportsJs}
+            \hyperlink{FAQ.HowToInsertLinkWithFromAndTo}{и
+              концом}
+            myHandlerCode \hyperlink{FAQ.HowToSetName}{назовите} её myHandler
+      \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+            Email и \hyperlink{FAQ.HowToSetName}{назовите} её email
+      \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение
+            связи email на значение "test"
+      \item Созерцайте ошибку, говорящую о том, что Email не содержит @
+      \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение
+            связи email на значение "test@deep"
+      \item Созерцайте отсутствие ошибки
+    \end{itemize}
+\paragraph{Создание обработчика с помощью связей}
 \begin{itemize}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.Type.Description}{Type} и
@@ -40,10 +77,10 @@
 ({ data: { newLink: emailLink } }) => {
   const email = emailLink.value?.value;
   if (!email) {
-  throw new Error(`Link ${emailLink.id} has not value`);
+      throw new Error(`Link ${emailLink.id} has not value`);
   }
   if (!email.includes("@")) {
-  throw new Error(`Email ${email} does not include @`);
+      throw new Error(`Email ${email} does not include @`);
   }
 };
             \end{lstlisting}

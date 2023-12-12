@@ -1,0 +1,56 @@
+\subsection{Права}
+Каждая связь имеет определённые права на определённое действие над определёнными связями. \
+\subsubsection{Rule}\hypertarget{Rule.Description}{}
+Rule - это связь, олицетворяющая право связи на действие над связью
+\subsubsection{RuleAction}\hypertarget{RuleAction.Description}{}
+RuleAction - это связь, определяющая действие, котороме может совершать субъект с объектом. Экземпляр \hyperlink{RuleAction.Description}{RuleAction} должен исходить из экземпляра \hyperlink{Rule.Description}{Rule} в экземпляр \hyperlink{Selector.Description}{Selector}
+\subsubsection{RuleObject}\hypertarget{RuleObject.Description}{}
+RuleObject - это связь, определяющая объект права, над которым субъект может совершать действие
+\subsubsection{RuleSubject}\hypertarget{RuleSubject.Description}{}
+RuleSubject - это связь, определяющая субъект права, который может совершать действие над объектом
+\hyperlink{RuleAction.Description}{RuleAction}\hyperlink{RuleSubject.Description}{RuleSubject}, \hyperlink{RuleObject.Description}{RuleObject} и  исходят из экземпляра \hyperlink{Core.Action.Description}{Action} в экземпляр \hyperlink{Selector.Description}{Selector}
+\subsubsection{Примеры}
+\paragraph{Разрешение на вставку Type для пользователя}
+\begin{itemize}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.User.Description}{User} и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myUser
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.Rule.Description}{Rule} и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRule
+
+  % Action
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.Selector.Description}{Selector} и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleActionSelector
+  \item \hyperlink{Core.Query.Description}{Запросите на отображение} \hyperlink{Core.AllowInsertType.Description}{AllowInsertType}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SelectorInclude.Description}{SelectorInclude} от myRuleActionSelector до \hyperlink{Core.AllowInsertType.Description}{AllowInsertType} и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleActionSelectorInclude
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.RuleAction.Description}{RuleAction} от myRule до myRuleActionSelector и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleAction
+
+  % Object
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.Selector.Description}{Selector} и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleObjectSelector
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.SelectorInclude.Description}{SelectorInclude} от myRuleObjectSelector до myUser и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleObjectSelectorInclude
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.RuleObject.Description}{RuleObject} от myRule до myRuleObjectSelector и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleObject
+
+  % Subject
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.Selector.Description}{Selector} и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleSubjectSelector
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.SelectorInclude.Description}{SelectorInclude} от myRuleSubjectSelector до myuser и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleSubjectSelectorInclude
+  \item \hyperlink{Core.Query.Description}{Запросите на отображение} \hyperlink{Core.joinTree.Description}{joinTree}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.SelectorTree.Description}{SelectorTree} от myRuleSubjectSelectorInclude до \hyperlink{Core.joinTree.Description}{joinTree}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
+  \hyperlink{Core.RuleSubject.Description}{RuleSubject} от myRule до myRuleSubjectSelector и
+  \hyperlink{FAQ.HowToSetName}{назовите} её myRuleSubject
+\end{itemize}

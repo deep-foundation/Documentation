@@ -29,7 +29,7 @@
 транзакция отменяется
 \subparagraph{Примеры}
 \paragraph{Создание обработчика с помощью редактора}
-\begin{itemize}
+\begin{enumerate}
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
             \hyperlink{Core.Type.Description}{Type} и
             \hyperlink{FAQ.HowToSetName}{назовите} её Email
@@ -63,11 +63,11 @@
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение
             связи email на значение "test@deep"
       \item Созерцайте отсутствие ошибки
-    \end{itemize}
+    \end{enumerate}
 \href{https://youtu.be/fDgIqL0pzsg}{Видео-гайд}
 
 \paragraph{Создание обработчика с помощью связей}
-\begin{itemize}
+\begin{enumerate}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.Type.Description}{Type} и
         \hyperlink{FAQ.HowToSetName}{назовите} её Email
@@ -101,7 +101,7 @@
   \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение
         связи email на значение "test@deep"
   \item Созерцайте отсутствие ошибки
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Асинхронные обработчики}
 \subparagraph{Описание}
@@ -124,7 +124,7 @@ promiseTree от связи-триггера. В визуальном интер
 \subparagraph{Примеры:}
 \paragraph{Создание обработчика с помощью редактора}
 Заметка: создание обработчика с помощью редактора тоже порождает связи, как в примере с созданием обработчика используя связи
-\begin{itemize}
+\begin{enumerate}
       \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
             \hyperlink{Core.Type.Description}{Type} и
             \hyperlink{FAQ.HowToSetName}{назовите} её Email
@@ -158,11 +158,11 @@ async ({ data: { newLink: emailLink } }) => {
       \item \hyperlink{DeepCase.UpdateLink.Description}{Обновите} значение
             связи email на значение "test@deep"
       \item Созерцайте отсутствие ошибки
-    \end{itemize}
+    \end{enumerate}
 \href{https://youtu.be/UFKOC1GT4nE}{Видео-гайд}
 
 \paragraph{Создание обработчика с помощью связей}
-\begin{itemize}
+\begin{enumerate}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.Type.Description}{Type} и
         \hyperlink{FAQ.HowToSetName}{назовите} её Email
@@ -202,7 +202,7 @@ async ({ data: { newLink: emailLink } }) => {
           асинхронного хендлера для связи email}
   \item Видим \hyperlink{Handlers.Async.Result}{результат асинхронного
           обработчика в виде связей}
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Справочник}
 \subparagraph{Параметры обработчика}
@@ -233,7 +233,7 @@ deep-foundation.com/my-path:5000.
 Серверные обработчики реализованы с помощью npm пакета express
 \paragraph{Примеры}
 \subparagraph{Обработчик, возвращающий "ok" в любом случае}
-\begin{itemize}
+\begin{enumerate}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким
         кодом:
@@ -272,12 +272,12 @@ deep-foundation.com/my-path:5000.
         нашего
         \hyperlink{Core.Router.Description}{Router} до нашего
         \hyperlink{Core.Port.Description}{Port}
-\end{itemize}
+\end{enumerate}
 
 \subparagraph{Обработчик, обрабатывающий входящий запрос}
 В данном примере обработчик будет проверять поле isOk в входящем запрос, если
 он true, то мы ответим строкой "ok", иначе "not ok"
-\begin{itemize}
+\begin{enumerate}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким
         кодом:
@@ -323,7 +323,7 @@ async (
         нашего
         \hyperlink{Core.Router.Description}{Router} до нашего
         \hyperlink{Core.Port.Description}{Port}
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Параметры обработчика}
 
@@ -366,7 +366,7 @@ Docker Container под названием JS Docker Isolation Container обр�
 маршрут /healtz. В нашем случае мы будем обрабатывать порт 5000, следовательно
 наш маршрут будет выглядеть так: deep-foundation.com:5000/healtz (вместо
 deep-foundation.com используйте свой адрес, на котором находится deep)
-\begin{itemize}
+\begin{enumerate}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким
         кодом:
@@ -391,7 +391,7 @@ deep-foundation.com используйте свой адрес, на котор�
         deep-foundation.com используйте свой адрес, на котором находится
         deep) и
         увидите ответ "ok" % TODO: Точно ок?
-\end{itemize}
+\end{enumerate}
 
 \subsubsection{Серверные обработчики по расписанию}
 Серверные обработчики позволяют выполнять определенные действия по расписанию.
@@ -411,7 +411,7 @@ deep-foundation.com используйте свой адрес, на котор�
 * * 1 * * означает, что обработчик будет запускаться каждую минуту каждого часа
 первого числа каждого месяца каждого дня недели
 TODO: В разработке
-\begin{itemize}
+\begin{enumerate}
   \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким
         значением:
@@ -460,4 +460,4 @@ TODO: В разработке
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с текстом
         "Hi!",
         содержащаяся в пользователе admin
-\end{itemize}
+\end{enumerate}

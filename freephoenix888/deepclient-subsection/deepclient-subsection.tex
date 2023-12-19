@@ -205,3 +205,14 @@ await deep.delete(
   const containTypeLinkId = await deep.id("@deep-foundation/core", "Contain")
   await deep.name(containTypeLinkId);
 \end{lstlisting}
+\subsubsection{deep.can}
+У Дип Клиента есть метод can, который позволяет проверить есть ли у связи права на определённое действие для определённой связи
+\paragraph{Примеры}
+\subparagraph{Проверка есть ли у админа права админа}
+\begin{lstlisting}
+await deep.can(
+  await deep.id("@deep-foundation/core", "Type"),
+  await deep.id("@deep-foundation/core", "Admin"),
+  await deep.id("deep", "users", "admin")
+)
+\end{lstlisting}

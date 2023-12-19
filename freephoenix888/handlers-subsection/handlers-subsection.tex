@@ -416,14 +416,14 @@ TODO: В разработке
         \hyperlink{Core.SyncTextFile.Description}{SyncTextFile} с таким
         значением:
         \begin{lstlisting}
-(deep) => {
+async (deep) => {
   await deep.insert({
     type_id: await deep.id("@deep-foundation/core", "SyncTextFile"),
     string: {
       data: {
         value: "Hi!"
       }
-    }
+    },
     in: {
       data: {
         type_id: await deep.id("@deep-foundation/core", "Contain"),

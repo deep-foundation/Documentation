@@ -10,4 +10,18 @@
   \item Когда рабочее пространство Gitpod с монорепозиторием dev будет инициализировано, нажмите на кнопку "Ports" в правом нижнем углу экрана и откройте порт 3007, кликнув по его URL или на кнопку "Open Browser" (имеет иконку глобуса).
   \item Теперь у вас открыт DeepCase. Это визуальный интерфейс для Deep. Вы можете использовать его для создания, обновления, удаления, просмотра, выбора, перемещения по ссылкам и многого другого.
 \end{itemize}
-\href{https://youtu.be/0lbcPGV17mQ}{Видео-гайд}
+\subsubsection{Авторизация как администратор}
+\begin{itemize}
+  \item Пропутешействуйте до типов вашего пользователя: Откройте контекстное меню вашего пользователя, нажмите на кнопку traveller, затем 'types'. Вы увидите типы вашего пользователя, то есть \hyperlink{Core.User.Description}{User} и его тип \hyperlink{Core.Type.Description}{Type}
+  \item Пропутешействуйте до связей типизированных типом \hyperlink{Core.User.Description}{User}: Откройте контекстное меню типа \hyperlink{Core.User.Description}{User} и нажмите на кнопку 'typed'. вы увидите все связи, которые имеют этот тип, в том числе там будет пользователь с именем admin
+  \item Авторизуйтесь как admin: Откройте контекстное меню связи admin и нажмите Login
+\end{itemize}
+\href{https://youtu.be/6UgOiIZMYr8}{Видео-гайд}
+\subsubsection{Создание пользователя, выдача ему прав, авторизация}
+\begin{itemize}
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.User.Description}{User} и \hyperlink{FAQ.HowToSetName}{назовите} её myUser
+  \item \hyperlink{DeepCase.InsertLink.Description}{Вставьте} связь типа \hyperlink{Core.Join.Description}{Join} от myUser до admin
+  \item Авторизуйтесь как myUser
+\end{itemize}
+\href{https://youtu.be/TeGln__84y8}{Видео-гайд}
+

@@ -35,5 +35,13 @@ await deep.insert({
 \end{verbatim}
 \paragraph{Почему при поиске связи мы видим две связи с одним и тем же именем?}
 Одна из связей обозначена иконкой папки. Это связь типа \hyperlink{Contain}{Core.Contain.Description}, а другая связь - скорее всего именно та, что вам нужна. Вы можете замететь, что у связи типа \hyperlink{Contain}{Core.Contain.Description} конец (стрелка вправо) указывает на связь, которая вам нужна
+\paragraph{Как создать новый docker isolation provider?}
+\begin{itemize}
+      \item Сделайте fork репозитория https://github.com/deep-foundation/js-docker-isolation-provider, измените код по своему усмотрению
+      \item Измените название во всех файлах
+      \item Установите deep пакет js-docker-isolation-provider
+      \item Измените название
+      \item Найдите связь типа DockerIsolationProvider и измените её значение на имя вашего docker образа, который генерируется в Github Actions вашего форка
+\end{itemize}
 \paragraph{Как выключить обработчик?}
 Обработчик может существовать, но не выполняться. Выполнение контролируется связями, название которых начинается словом Handle. К примеру, если ваш обработчик обрабатывает вставку, то вам нужно удалить связь типа \hyperlink{HandleInsert}{Core.HandleInsert.Description}, связанный с вашим обработчиком. Это так же можно сделать в DeepCase в редакторе обработчиков

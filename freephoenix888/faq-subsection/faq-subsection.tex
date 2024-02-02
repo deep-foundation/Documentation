@@ -149,3 +149,17 @@ await deep.select({
   },
 });
 \end{verbatim}
+\paragraph{Как найти Contain связь, которая ведёт на опрелённую связь?}
+\begin{verbatim}
+const linkId = LINK_ID;
+await deep.select(
+  {
+    to_id: linkId,
+    type_id: {
+      _id: [
+        '@deep-foundation/core', 'Contain'
+      ]
+    }
+  }
+);
+\end{verbatim}

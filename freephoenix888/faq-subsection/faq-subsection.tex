@@ -107,3 +107,19 @@ await deep.delete({
     }
   })
 \end{verbatim}
+\paragraph{Как запросить все связи определённого пакета в DeepCase?}
+Используйте вот такой Query:
+\begin{verbatim}
+{
+  up: {
+    parent: {
+      id: {
+        _id: ["YOUR_PACKAGE_NAME"]
+      }
+    },
+    tree_id: {
+      _id: ["@deep-foundation/core", "containTree"]
+    }
+  }
+}
+\end{verbatim}

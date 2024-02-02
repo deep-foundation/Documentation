@@ -138,3 +138,14 @@ await deep.insert(
   }
 );
 \end{verbatim}
+\paragraph{Как найти связь, значение которой содержит определённое значение?}
+\begin{verbatim}
+const value = PLACEHOLDER;
+await deep.select({
+  [typeof value]: {
+    value: {
+      _contains: value,
+    },
+  },
+});
+\end{verbatim}

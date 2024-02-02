@@ -123,3 +123,18 @@ await deep.delete({
   }
 }
 \end{verbatim}
+\paragraph{Почему обновление связи не работает?}
+Если у вашей связи не существовало значение до обновления, для начала вам нужно вставить значение, и лишь затем, после того, как у связи есть значение - вы можете его обновлять.
+Пример вставки значения:
+\begin{verbatim}
+const value = VALUE /* "Value" / 123 / {property: value}  */;
+const linkId = LINK_ID;
+await deep.insert(
+  {
+    link_id: linkId, value: value 
+  },
+  {
+    table: `${typeof value}s`
+  }
+);
+\end{verbatim}

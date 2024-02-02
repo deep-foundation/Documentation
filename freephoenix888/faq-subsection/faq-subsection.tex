@@ -45,3 +45,19 @@ await deep.insert({
 \end{itemize}
 \paragraph{Как выключить обработчик?}
 Обработчик может существовать, но не выполняться. Выполнение контролируется связями, название которых начинается словом Handle. К примеру, если ваш обработчик обрабатывает вставку, то вам нужно удалить связь типа \hyperlink{HandleInsert}{Core.HandleInsert.Description}, связанный с вашим обработчиком. Это так же можно сделать в DeepCase в редакторе обработчиков
+\paragraph{Как удалить связь и всё, что в ней содержится?}
+\begin{verbatim}
+const linkId = // Your Link Id
+await deep.delete({
+    up: {
+        "tree_id": {
+          "_id": [
+            "@deep-foundation/core",
+            "containTree"
+          ]
+        },
+      parent_id: linkId
+    }
+  })
+\end{verbatim}
+Заметка: связи, как-либо связанные с удалёнными связями - не будут удалены. Для рекурсивного удаления рекомендуется использовать пакет \href{@lemeho/garbage-collection}{https://www.npmjs.com/package/@lemeho/garbage-collection}

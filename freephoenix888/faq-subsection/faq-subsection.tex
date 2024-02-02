@@ -61,3 +61,24 @@ await deep.delete({
   })
 \end{verbatim}
 Заметка: связи, как-либо связанные с удалёнными связями - не будут удалены. Для рекурсивного удаления рекомендуется использовать пакет \href{@lemeho/garbage-collection}{https://www.npmjs.com/package/@lemeho/garbage-collection}
+\paragraph{Как удалить все Contain связи, которые ведут к удалённым связям?}
+\begin{verbatim}
+const {data: containLinks} = await deep.select({
+    type_id: {
+        _id: ["@deep-foundation/core", "Contain"]
+    }
+}, {returning: `${deep.selectReturning} to {${deep.selectReturning}}`})
+
+
+const containLinkIdsToDelete = [];
+for(const containLink of containLinks) {
+    if(!containLink.to){
+        containLinkIdsToDelete.push(containLink.id)
+    }
+}
+await deep.delete({
+    id: {
+        _in: containLinkIdsToDelete
+    }
+})
+\end{verbatim}

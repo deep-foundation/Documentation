@@ -82,3 +82,28 @@ await deep.delete({
     }
 })
 \end{verbatim}
+\paragraph{Как удалить все связи, которые используют типы из определённого пакета?}
+\begin{verbatim}
+const PACKAGE_NAME = // Your Package Name
+
+await deep.delete({
+    up: {
+      parent: {
+        type_id: {
+          _id: ["@deep-foundation/core", "Contain"]
+        },
+        from_id: deep.linkId,
+        to: {
+          type: {
+            in: {
+              type_id: {
+                _id: ["@deep-foundation/core", "Contain"]
+              },
+              from: { string: { value: { _eq: PACKAGE_NAME  } } }
+            }
+          }
+        }
+      }
+    }
+  })
+\end{verbatim}
